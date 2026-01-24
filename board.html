@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Board - Central Utah Tree Festival</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --sage: #8B9A7E;
+            --cream: #F5F1E8;
+            --terracotta: #C17B5E;
+            --dark-sage: #5F6D54;
+            --white: #FFFFFF;
+            --text-dark: #2C3E2E;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--cream);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-sage);
+            font-family: 'Playfair Display', serif;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--terracotta);
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--dark-sage);
+            margin: 3px 0;
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--sage) 0%, var(--dark-sage) 100%);
+            color: var(--white);
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        /* Board Members Section */
+        .board-section {
+            background-color: var(--white);
+            padding: 4rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .board-intro {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .board-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .board-member {
+            background-color: var(--cream);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .board-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+
+        .member-photo {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            background-color: var(--sage);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .member-info {
+            padding: 2rem;
+        }
+
+        .member-name {
+            font-size: 1.5rem;
+            color: var(--dark-sage);
+            margin-bottom: 0.5rem;
+        }
+
+        .member-title {
+            font-size: 1rem;
+            color: var(--terracotta);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .member-bio {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-dark);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-sage);
+            color: var(--white);
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--terracotta);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-icon {
+            color: var(--white);
+            transition: color 0.3s;
+        }
+
+        .social-icon:hover {
+            color: var(--terracotta);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            nav ul {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: left 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 2rem 0;
+            }
+
+            nav ul.active {
+                left: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .board-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .member-photo {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Central Utah Tree Festival</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#mission">About</a></li>
+                <li><a href="index.html#event">The Festival</a></li>
+                <li><a href="board.html">Our Board</a></li>
+                <li><a href="index.html#donate">Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Our Board of Directors</h1>
+        <p>Meet the dedicated volunteers leading our mission to connect rural children with specialized medical care</p>
+    </section>
+
+    <!-- Board Members Section -->
+    <section class="board-section">
+        <div class="container">
+            <div class="board-intro">
+                <p>
+                    Our board members are passionate community leaders who donate their time and expertise 
+                    to ensure every child in Sanpete County has access to the medical care they need. 
+                    Together, they guide the Central Utah Tree Festival and oversee how funds are distributed 
+                    to support families on their healthcare journeys.
+                </p>
+            </div>
+
+            <div class="board-grid">
+                <!-- Board Member 1 - Example -->
+                <div class="board-member">
+                    <div class="member-photo">
+                        <!-- Replace with actual image: <img src="images/board-member-1.jpg" alt="Board Member Name"> -->
+                        Photo
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Member Name</h3>
+                        <div class="member-title">President</div>
+                        <p class="member-bio">
+                            Oversees the organization's strategic direction and ensures alignment with our mission. 
+                            Coordinates board activities and serves as the primary liaison between the board and 
+                            the community we serve.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Board Member 2 - Example -->
+                <div class="board-member">
+                    <div class="member-photo">
+                        <!-- Replace with actual image: <img src="images/board-member-2.jpg" alt="Board Member Name"> -->
+                        Photo
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Member Name</h3>
+                        <div class="member-title">Vice President</div>
+                        <p class="member-bio">
+                            Supports the president in organizational leadership and steps in as needed. 
+                            Leads special initiatives and helps maintain strong relationships with local 
+                            healthcare providers and community partners.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Board Member 3 - Example -->
+                <div class="board-member">
+                    <div class="member-photo">
+                        <!-- Replace with actual image: <img src="images/board-member-3.jpg" alt="Board Member Name"> -->
+                        Photo
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Member Name</h3>
+                        <div class="member-title">Treasurer</div>
+                        <p class="member-bio">
+                            Manages the organization's finances and ensures transparent accounting of all donations. 
+                            Oversees fund distribution to families and maintains detailed records of how every 
+                            dollar supports our mission.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Board Member 4 - Example -->
+                <div class="board-member">
+                    <div class="member-photo">
+                        <!-- Replace with actual image: <img src="images/board-member-4.jpg" alt="Board Member Name"> -->
+                        Photo
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Member Name</h3>
+                        <div class="member-title">Secretary</div>
+                        <p class="member-bio">
+                            Maintains organizational records and communications. Documents board meetings and 
+                            ensures proper record-keeping of our activities and decisions that impact the 
+                            families we serve.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Board Member 5 - Example -->
+                <div class="board-member">
+                    <div class="member-photo">
+                        <!-- Replace with actual image: <img src="images/board-member-5.jpg" alt="Board Member Name"> -->
+                        Photo
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Member Name</h3>
+                        <div class="member-title">Event Coordinator</div>
+                        <p class="member-bio">
+                            Plans and executes the annual Central Utah Tree Festival. Coordinates with vendors, 
+                            volunteers, and community partners to create a successful event that brings our 
+                            community together for a great cause.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Board Member 6 - Example -->
+                <div class="board-member">
+                    <div class="member-photo">
+                        <!-- Replace with actual image: <img src="images/board-member-6.jpg" alt="Board Member Name"> -->
+                        Photo
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Member Name</h3>
+                        <div class="member-title">Community Outreach</div>
+                        <p class="member-bio">
+                            Connects with families who need support and builds relationships throughout Sanpete County. 
+                            Works directly with healthcare facilities to identify children who could benefit from 
+                            our assistance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html#mission">About Us</a>
+                <a href="index.html#event">The Festival</a>
+                <a href="board.html">Our Board</a>
+                <a href="mailto:contact@example.com">Contact</a>
+            </div>
+            
+            <!-- Social Media Links -->
+            <div class="footer-social">
+                <a href="https://www.facebook.com/events/746518277994124/" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <p style="margin-top: 1.5rem;">&copy; 2025 Central Utah Tree Festival. A passion for helping the children in Sanpete County.</p>
+        </div>
+    </footer>
+
+    <!-- Hamburger Menu Script -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
