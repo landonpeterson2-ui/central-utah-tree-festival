@@ -76,11 +76,16 @@ const galleryImages = document.querySelectorAll('.carousel-slide img');
 if (lightbox && galleryImages.length > 0) {
     let currentImageIndex = 0;
 
+    // Get full-size image path from responsive image path
+    function getFullSizeSrc(src) {
+        return src.replace(/-\d+w\.webp$/, '.webp');
+    }
+
     window.openLightbox = function(index) {
         currentImageIndex = index;
         const lightboxImg = document.getElementById('lightbox-img');
 
-        lightboxImg.src = galleryImages[currentImageIndex].src;
+        lightboxImg.src = getFullSizeSrc(galleryImages[currentImageIndex].src);
         lightboxImg.alt = galleryImages[currentImageIndex].alt;
 
         lightbox.classList.add('active');
@@ -105,7 +110,7 @@ if (lightbox && galleryImages.length > 0) {
         }
 
         const lightboxImg = document.getElementById('lightbox-img');
-        lightboxImg.src = galleryImages[currentImageIndex].src;
+        lightboxImg.src = getFullSizeSrc(galleryImages[currentImageIndex].src);
         lightboxImg.alt = galleryImages[currentImageIndex].alt;
     };
 

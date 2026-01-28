@@ -23,7 +23,12 @@
       "Bash(grep:*)",
       "Bash(wc:*)",
       "Bash(git commit:*)",
-      "Bash(git pull:*)"
+      "Bash(git pull:*)",
+      "Bash(npm init:*)",
+      "Bash(echo:*)",
+      "Bash(/usr/local/bin/node:*)",
+      "Bash(/usr/local/bin/npm init -y)",
+      "Bash(/usr/local/bin/npm install sharp)"
     ]
   }
 }
