@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="styles.css">
     <script defer src="https://widgets.givebutter.com/latest.umd.cjs?acct=aPYWSxSupQMAoQcu&p=other"></script>
 
-    <!-- Structured Data -->
+    <!-- Structured Data - Organization -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -65,6 +65,42 @@
             "@type": "PostalAddress",
             "addressRegion": "UT",
             "addressCountry": "US"
+        }
+    }
+    </script>
+
+    <!-- Structured Data - Event -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Central Utah Tree Festival 2025",
+        "description": "Annual holiday tree festival and silent auction supporting rural families traveling to Primary Children's Hospital. Browse and bid on beautifully decorated trees and wreaths.",
+        "image": "https://centralutahtreefestival.org/images/central-utah-tree-festival-logo.webp",
+        "startDate": "2025-12-01",
+        "endDate": "2025-12-15",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+        "location": {
+            "@type": "Place",
+            "name": "Sanpete County, Utah",
+            "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "UT",
+                "addressCountry": "US"
+            }
+        },
+        "organizer": {
+            "@type": "Organization",
+            "name": "Central Utah Tree Festival",
+            "url": "https://centralutahtreefestival.org"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://givebutter.com/c/Z1ZX2I/auction"
         }
     }
     </script>
@@ -177,7 +213,7 @@
             
             <!-- Carousel -->
             <div class="gallery-carousel">
-                <button class="carousel-nav carousel-prev" onclick="moveCarousel(-1)">❮</button>
+                <button class="carousel-nav carousel-prev" onclick="moveCarousel(-1)" aria-label="Previous slide">❮</button>
                 <div class="carousel-container" id="carouselContainer">
                     <!-- Slides -->
                     <div class="carousel-slide">
@@ -208,7 +244,7 @@
                         <img src="images/tree-9.webp" alt="Luxurious purple and silver themed tree with velvet ribbons and glitter accents" onclick="openLightbox(8)" loading="lazy">
                     </div>
                 </div>
-                <button class="carousel-nav carousel-next" onclick="moveCarousel(1)">❯</button>
+                <button class="carousel-nav carousel-next" onclick="moveCarousel(1)" aria-label="Next slide">❯</button>
             </div>
             
             <!-- Carousel Dots -->

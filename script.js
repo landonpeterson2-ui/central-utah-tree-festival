@@ -60,10 +60,13 @@ if (carouselContainer) {
         updateCarousel();
     };
 
-    // Auto-advance carousel every 5 seconds
-    setInterval(() => {
-        moveCarousel(1);
-    }, 5000);
+    // Auto-advance carousel every 5 seconds (unless user prefers reduced motion)
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReducedMotion) {
+        setInterval(() => {
+            moveCarousel(1);
+        }, 5000);
+    }
 }
 
 // Photo Gallery Lightbox (only runs if lightbox elements exist)

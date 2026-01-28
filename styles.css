@@ -1042,3 +1042,27 @@ footer {
         height: 300px;
     }
 }
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .carousel-container {
+        transition: none !important;
+    }
+
+    .board-member:hover,
+    .help-card:hover,
+    .auction-feature:hover,
+    .social-icon:hover,
+    .btn:hover {
+        transform: none !important;
+    }
+}
