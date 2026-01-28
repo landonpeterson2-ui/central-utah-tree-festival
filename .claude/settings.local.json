@@ -13,7 +13,13 @@
       "Bash(magick:*)",
       "Bash(dir:*)",
       "Bash(del .\\\\nul)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(for i in tree-*.webp)",
+      "Bash(do magick \"$i\" -trim +repage \"$i\")",
+      "Bash(done)",
+      "Bash(ls:*)",
+      "Bash(do magick \"$i\" -fuzz 10% -trim +repage \"$i\")",
+      "Bash(do echo -n \"$i: \")"
     ]
   }
 }

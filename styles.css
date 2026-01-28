@@ -357,7 +357,7 @@ h2 {
 
 .carousel-slide img {
     width: 100%;
-    max-width: 500px;
+    max-width: 100%;
     height: auto;
     max-height: 700px;
     object-fit: contain;
