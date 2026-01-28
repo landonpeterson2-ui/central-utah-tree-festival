@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where:*)",
+      "Bash(python convert_to_webp.py:*)",
+      "Bash(findstr:*)",
+      "Bash(dir \"C:\\\\Program Files\\\\Python*\" /B /AD)",
+      "Bash(dir \"C:\\\\Python*\" /B /AD)",
+      "Bash(magick mogrify:*)",
+      "Bash(convert:*)",
+      "Bash(dir \"C:\\\\Program Files\\\\ImageMagick*\" /B /AD)",
+      "Bash(dir \"C:\\\\Program Files \\(x86\\)\\\\ImageMagick*\" /B /AD)",
+      "Bash(magick:*)",
+      "Bash(dir:*)",
+      "Bash(del .\\\\nul)",
+      "Bash(git add:*)"
+    ]
+  }
+}

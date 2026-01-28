@@ -4,735 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Central Utah Tree Festival - Connecting Children to Care</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Central Utah Tree Festival supports rural families in Sanpete County traveling to Primary Children's Hospital. Join our annual holiday auction and help children access specialized medical care.">
+    <meta name="keywords" content="Central Utah Tree Festival, Sanpete County, Primary Children's Hospital, charity auction, Christmas trees, children's healthcare, rural Utah">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Central Utah Tree Festival - Connecting Children to Care">
+    <meta property="og:description" content="Supporting rural families traveling to Primary Children's Hospital through our annual holiday tree festival and auction.">
+    <meta property="og:image" content="https://centralutahtreefestival.org/images/central-utah-tree-festival-logo.webp">
+    <meta property="og:url" content="https://centralutahtreefestival.org/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Central Utah Tree Festival">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Central Utah Tree Festival - Connecting Children to Care">
+    <meta name="twitter:description" content="Supporting rural families traveling to Primary Children's Hospital through our annual holiday tree festival and auction.">
+    <meta name="twitter:image" content="https://centralutahtreefestival.org/images/central-utah-tree-festival-logo.webp">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://centralutahtreefestival.org/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <script async src="https://widgets.givebutter.com/latest.umd.cjs?acct=aPYWSxSupQMAoQcu&p=other"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --sage: #8B9A7E;
-            --cream: #F5F1E8;
-            --terracotta: #C17B5E;
-            --dark-sage: #5F6D54;
-            --white: #FFFFFF;
-            --text-dark: #2C3E2E;
-        }
-
-        body {
-            font-family: 'Lato', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-            background-color: var(--cream);
-        }
-
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        /* Header & Navigation */
-        header {
-            background-color: var(--white);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--dark-sage);
-            font-family: 'Playfair Display', serif;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--terracotta);
-        }
-
-        /* Hamburger Menu */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background-color: var(--dark-sage);
-            margin: 3px 0;
-            transition: all 0.3s;
-            border-radius: 2px;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(8px, 8px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--sage) 0%, var(--dark-sage) 100%);
-            color: var(--white);
-            padding: 6rem 2rem 4rem;
-            text-align: center;
-        }
-
-        .hero-logo {
-            max-width: 250px;
-            width: 100%;
-            height: auto;
-            margin: 0 auto 2rem;
-            display: block;
-        }
-
-        /* Progress Bar Section */
-        .progress-section {
-            background: linear-gradient(135deg, var(--sage) 0%, var(--dark-sage) 100%);
-            padding: 0 2rem 4rem;
-            display: flex;
-            justify-content: center;
-        }
-
-        .progress-container {
-            max-width: 700px;
-            width: 100%;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
-            opacity: 0.95;
-            font-weight: 300;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2.5rem;
-            font-size: 1rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s;
-            font-weight: 700;
-            font-family: 'Lato', sans-serif;
-            letter-spacing: 0.5px;
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
-        }
-
-        .btn-secondary:hover {
-            background-color: rgba(255,255,255,0.1);
-        }
-
-        /* Main Content Sections */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        section {
-            margin-bottom: 4rem;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
-            color: var(--dark-sage);
-        }
-
-        /* Mission Section */
-        .mission {
-            background-color: var(--white);
-            padding: 4rem 2rem;
-        }
-
-        .mission-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .mission-content p {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        .stat-highlight {
-            background-color: var(--cream);
-            padding: 2rem;
-            border-left: 4px solid var(--terracotta);
-            margin: 2rem 0;
-            font-size: 1.2rem;
-            font-style: italic;
-        }
-
-        /* Auction Section */
-        .auction {
-            background: linear-gradient(135deg, var(--terracotta) 0%, #A66950 100%);
-            color: var(--white);
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        .auction h2 {
-            color: var(--white);
-            margin-bottom: 1.5rem;
-        }
-
-        .auction-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .auction-content p {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .auction-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 2.5rem 0;
-            text-align: center;
-        }
-
-        .auction-feature {
-            padding: 1.5rem;
-        }
-
-        .auction-feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 0.75rem;
-            display: block;
-        }
-
-        .auction-feature h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: var(--white);
-        }
-
-        .auction-feature p {
-            font-size: 0.95rem;
-            margin: 0;
-            opacity: 0.9;
-        }
-
-        .btn-auction {
-            background-color: var(--white);
-            color: var(--terracotta);
-            padding: 1.2rem 3rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-
-        .btn-auction:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
-            background-color: var(--cream);
-        }
-
-        /* How to Help Section */
-        .how-to-help {
-            background-color: var(--white);
-            padding: 4rem 2rem;
-        }
-
-        .help-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .help-card {
-            background-color: var(--cream);
-            padding: 2rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--terracotta);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .help-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-
-        .help-card h3 {
-            color: var(--dark-sage);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .help-card p {
-            line-height: 1.7;
-            color: var(--text-dark);
-        }
-
-        /* Photo Gallery Carousel */
-        .gallery {
-            background-color: var(--cream);
-            padding: 4rem 2rem;
-        }
-
-        .gallery-carousel {
-            position: relative;
-            max-width: 800px;
-            margin: 2rem auto;
-            overflow: hidden;
-        }
-
-        .carousel-container {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel-slide {
-            min-width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .carousel-slide img {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            max-height: 700px;
-            object-fit: contain;
-            border-radius: 8px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-            cursor: pointer;
-        }
-
-        .carousel-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.9);
-            color: var(--dark-sage);
-            font-size: 2rem;
-            border: none;
-            padding: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            border-radius: 4px;
-            z-index: 10;
-        }
-
-        .carousel-nav:hover {
-            background-color: rgba(255, 255, 255, 1);
-        }
-
-        .carousel-prev {
-            left: 20px;
-        }
-
-        .carousel-next {
-            right: 20px;
-        }
-
-        .carousel-dots {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .carousel-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: var(--sage);
-            opacity: 0.4;
-            cursor: pointer;
-            transition: opacity 0.3s;
-            border: none;
-            padding: 0;
-        }
-
-        .carousel-dot.active {
-            opacity: 1;
-            background-color: var(--terracotta);
-        }
-
-        /* Lightbox */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .lightbox.active {
-            display: flex;
-            opacity: 1;
-        }
-
-        .lightbox-content {
-            max-width: 90%;
-            max-height: 90%;
-            position: relative;
-        }
-
-        .lightbox-content img {
-            max-width: 100%;
-            max-height: 90vh;
-            border-radius: 4px;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            color: var(--white);
-            font-size: 2.5rem;
-            font-weight: 300;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 0;
-            width: 40px;
-            height: 40px;
-            line-height: 1;
-        }
-
-        .lightbox-close:hover {
-            color: var(--terracotta);
-        }
-
-        .lightbox-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            font-size: 2rem;
-            border: none;
-            padding: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            border-radius: 4px;
-        }
-
-        .lightbox-nav:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .lightbox-prev {
-            left: 20px;
-        }
-
-        .lightbox-next {
-            right: 20px;
-        }
-
-        /* Impact Section */
-        .impact {
-            background-color: var(--sage);
-            color: var(--white);
-            padding: 4rem 2rem;
-        }
-
-        .impact h2 {
-            color: var(--white);
-        }
-
-        .impact-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .stat-box {
-            text-align: center;
-            padding: 2rem 1rem;
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 600;
-            display: block;
-            margin-bottom: 0.5rem;
-            line-height: 1.2;
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            opacity: 0.9;
-            line-height: 1.4;
-        }
-
-        /* Stay Updated Section */
-        .stay-updated {
-            background-color: var(--dark-sage);
-            color: var(--white);
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .stay-updated h2 {
-            color: var(--white);
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .stay-updated p {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 1.5rem;
-            opacity: 0.95;
-        }
-
-        .stay-updated-link {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            background-color: var(--white);
-            color: var(--dark-sage);
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-
-        .stay-updated-link:hover {
-            background-color: var(--cream);
-            transform: translateY(-2px);
-        }
-
-        /* Donation Section */
-        .donation {
-            background-color: var(--white);
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        .donation-embed {
-            max-width: 600px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background-color: var(--cream);
-            border-radius: 8px;
-            min-height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Floating Donate Widget */
-        .floating-donate {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .floating-donate:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(0,0,0,0.2);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark-sage);
-            color: var(--white);
-            padding: 3rem 2rem 1.5rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-links {
-            margin-bottom: 2rem;
-        }
-
-        .footer-links a {
-            color: var(--white);
-            text-decoration: none;
-            margin: 0 1rem;
-            opacity: 0.9;
-        }
-
-        .footer-links a:hover {
-            opacity: 1;
-            text-decoration: underline;
-        }
-
-        .footer-social {
-            margin-top: 1.5rem;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-
-        .social-icon {
-            color: var(--white);
-            font-size: 1.5rem;
-            text-decoration: none;
-            opacity: 0.9;
-            transition: opacity 0.3s, transform 0.3s;
-            display: inline-block;
-        }
-
-        .social-icon:hover {
-            opacity: 1;
-            transform: translateY(-3px);
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .hero-logo {
-                max-width: 180px;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            nav ul {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                flex-direction: column;
-                background-color: var(--white);
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-                padding: 1rem 0;
-                gap: 0;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease-in-out;
-            }
-
-            nav ul.active {
-                max-height: 400px;
-            }
-
-            nav ul li {
-                padding: 0.75rem 2rem;
-                border-bottom: 1px solid var(--cream);
-            }
-
-            nav ul li:last-child {
-                border-bottom: none;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            .stat-number {
-                font-size: 1.5rem;
-            }
-
-            .floating-donate {
-                bottom: 20px;
-                right: 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://widgets.givebutter.com/latest.umd.cjs?acct=aPYWSxSupQMAoQcu&p=other"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -745,7 +42,7 @@
                 <span></span>
             </div>
             <ul id="navMenu">
-                <li><a href="#mission">About</a></li>
+                <li><a href="about.html">Our Story</a></li>
                 <li><a href="#auction">Auction</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="board.html">Our Board</a></li>
@@ -756,7 +53,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <img src="images/central-utah-tree-festival-logo.png" alt="Central Utah Tree Festival - Est. 2024" class="hero-logo">
+        <img src="images/central-utah-tree-festival-logo.webp" alt="Central Utah Tree Festival - Est. 2024" class="hero-logo" width="250" height="250">
         <p>Supporting Rural Families, One Journey at a Time</p>
         <div class="cta-buttons">
             <a href="#auction" class="btn btn-secondary">View the Auction</a>
@@ -841,31 +138,31 @@
                 <div class="carousel-container" id="carouselContainer">
                     <!-- Slides -->
                     <div class="carousel-slide">
-                        <img src="images/tree-1.JPEG" alt="Decorated Christmas Tree" onclick="openLightbox(0)">
+                        <img src="images/tree-1.webp" alt="Beautifully decorated Christmas tree with ornaments and lights" onclick="openLightbox(0)" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                        <img src="images/tree-2.JPEG" alt="Decorated Christmas Tree" onclick="openLightbox(1)">
+                        <img src="images/tree-2.webp" alt="Festive Christmas tree decorated for the holidays" onclick="openLightbox(1)" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                        <img src="images/tree-3.JPEG" alt="Decorated Christmas Tree" onclick="openLightbox(2)">
+                        <img src="images/tree-3.webp" alt="Elegant holiday tree with seasonal decorations" onclick="openLightbox(2)" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                        <img src="images/tree-4.JPEG" alt="Decorated Christmas Tree" onclick="openLightbox(3)">
+                        <img src="images/tree-4.webp" alt="Christmas tree adorned with festive ornaments" onclick="openLightbox(3)" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                        <img src="images/tree-5.JPEG" alt="Decorated Christmas Tree" onclick="openLightbox(4)">
+                        <img src="images/tree-5.webp" alt="Decorated holiday tree for Christmas auction" onclick="openLightbox(4)" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                        <img src="images/tree-6.JPEG" alt="Decorated Christmas Tree" onclick="openLightbox(5)">
+                        <img src="images/tree-6.webp" alt="Festive Christmas tree with holiday decorations" onclick="openLightbox(5)" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                        <img src="images/tree-7.JPEG" alt="Decorated Christmas Tree" onclick="openLightbox(6)">
+                        <img src="images/tree-7.webp" alt="Beautifully styled Christmas tree for charity auction" onclick="openLightbox(6)" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                        <img src="images/tree-8.JPEG" alt="Decorated Christmas Tree" onclick="openLightbox(7)">
+                        <img src="images/tree-8.webp" alt="Holiday tree decorated with ornaments and lights" onclick="openLightbox(7)" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                        <img src="images/tree-9.JPEG" alt="Decorated Christmas Tree" onclick="openLightbox(8)">
+                        <img src="images/tree-9.webp" alt="Elegant Christmas tree from tree festival auction" onclick="openLightbox(8)" loading="lazy">
                     </div>
                 </div>
                 <button class="carousel-nav carousel-next" onclick="moveCarousel(1)">❯</button>
@@ -992,9 +289,10 @@
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <a href="#mission">About Us</a>
-                <a href="#event">The Festival</a>
-                <a href="/cdn-cgi/l/email-protection#ed9b8486848c83838f8c84818894ad8a808c8481c38e8280">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">Our Story</a>
+                <a href="board.html">Our Board</a>
+                <a href="mailto:contact@example.com">Contact</a>
             </div>
             
             <!-- Social Media Links -->
@@ -1025,133 +323,6 @@
         <givebutter-widget id="Lq548L"></givebutter-widget>
     </div>
 
-    <!-- Givebutter Script -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://js.givebutter.com/elements/latest.js"></script>
-
-    <!-- Hamburger Menu Script -->
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('navMenu');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        // Close menu when clicking on a link
-        document.querySelectorAll('#navMenu a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            }
-        });
-
-        // Photo Gallery Carousel
-        let currentSlide = 0;
-        const carouselContainer = document.getElementById('carouselContainer');
-        const slides = document.querySelectorAll('.carousel-slide');
-        const dots = document.querySelectorAll('.carousel-dot');
-        const totalSlides = slides.length;
-
-        function updateCarousel() {
-            const offset = -currentSlide * 100;
-            carouselContainer.style.transform = `translateX(${offset}%)`;
-            
-            // Update dots
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
-            });
-        }
-
-        function moveCarousel(direction) {
-            currentSlide += direction;
-            
-            if (currentSlide < 0) {
-                currentSlide = totalSlides - 1;
-            } else if (currentSlide >= totalSlides) {
-                currentSlide = 0;
-            }
-            
-            updateCarousel();
-        }
-
-        function goToSlide(index) {
-            currentSlide = index;
-            updateCarousel();
-        }
-
-        // Auto-advance carousel every 5 seconds
-        setInterval(() => {
-            moveCarousel(1);
-        }, 5000);
-
-        // Photo Gallery Lightbox
-        let currentImageIndex = 0;
-        const galleryImages = document.querySelectorAll('.carousel-slide img');
-
-        function openLightbox(index) {
-            currentImageIndex = index;
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            
-            lightboxImg.src = galleryImages[currentImageIndex].src;
-            lightboxImg.alt = galleryImages[currentImageIndex].alt;
-            
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
-        }
-
-        function closeLightbox(event) {
-            if (event.target.id === 'lightbox' || event.target.classList.contains('lightbox-close')) {
-                const lightbox = document.getElementById('lightbox');
-                lightbox.classList.remove('active');
-                document.body.style.overflow = ''; // Restore scrolling
-            }
-        }
-
-        function changeImage(direction) {
-            currentImageIndex += direction;
-            
-            // Loop around if at the beginning or end
-            if (currentImageIndex < 0) {
-                currentImageIndex = galleryImages.length - 1;
-            } else if (currentImageIndex >= galleryImages.length) {
-                currentImageIndex = 0;
-            }
-            
-            const lightboxImg = document.getElementById('lightbox-img');
-            lightboxImg.src = galleryImages[currentImageIndex].src;
-            lightboxImg.alt = galleryImages[currentImageIndex].alt;
-        }
-
-        // Close lightbox with Escape key
-        document.addEventListener('keydown', (e) => {
-            const lightbox = document.getElementById('lightbox');
-            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-                lightbox.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
-
-        // Navigate with arrow keys
-        document.addEventListener('keydown', (e) => {
-            const lightbox = document.getElementById('lightbox');
-            if (lightbox.classList.contains('active')) {
-                if (e.key === 'ArrowLeft') {
-                    changeImage(-1);
-                } else if (e.key === 'ArrowRight') {
-                    changeImage(1);
-                }
-            }
-        });
-    </script>
+    <script defer src="script.js"></script>
 </body>
 </html>
