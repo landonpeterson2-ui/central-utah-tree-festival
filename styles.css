@@ -376,7 +376,7 @@ h2 {
 
 .btn-auction {
     background-color: var(--white);
-    color: var(--terracotta);
+    color: #8B4332;
     padding: 1.2rem 3rem;
     font-size: 1.1rem;
     font-weight: 600;
@@ -498,25 +498,43 @@ h2 {
 .carousel-dots {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
+    gap: 0;
+    margin-top: 0.5rem;
 }
 
 .carousel-dot {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    border: none;
+    padding: 0;
+    position: relative;
+}
+
+.carousel-dot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background-color: var(--sage);
     opacity: 0.4;
-    cursor: pointer;
-    transition: opacity 0.3s;
-    border: none;
-    padding: 0;
+    transition: opacity 0.3s, background-color 0.3s;
 }
 
-.carousel-dot.active {
+.carousel-dot.active::after {
     opacity: 1;
     background-color: var(--terracotta);
+}
+
+.carousel-dot:hover::after {
+    opacity: 0.7;
 }
 
 /* Lightbox */
@@ -600,7 +618,7 @@ h2 {
 
 /* Impact Section */
 .impact {
-    background-color: var(--sage);
+    background-color: #4A5A40;
     color: var(--white);
     padding: 4rem 2rem;
 }
@@ -755,7 +773,7 @@ h2 {
     position: absolute;
     top: -40px;
     left: 0;
-    background: var(--terracotta);
+    background: #8B4332;
     color: var(--white);
     padding: 0.5rem 1rem;
     text-decoration: none;
@@ -765,6 +783,8 @@ h2 {
 
 .skip-to-content:focus {
     top: 0;
+    outline: 2px solid var(--white);
+    outline-offset: 2px;
 }
 
 /* Page Header (About/Board pages) */

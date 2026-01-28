@@ -28,7 +28,9 @@
       "Bash(echo:*)",
       "Bash(/usr/local/bin/node:*)",
       "Bash(/usr/local/bin/npm init -y)",
-      "Bash(/usr/local/bin/npm install sharp)"
+      "Bash(/usr/local/bin/npm install sharp)",
+      "Bash(npx lighthouse:*)",
+      "Bash(pkill:*)"
     ]
   }
 }
