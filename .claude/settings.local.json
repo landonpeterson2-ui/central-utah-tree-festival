@@ -19,7 +19,10 @@
       "Bash(done)",
       "Bash(ls:*)",
       "Bash(do magick \"$i\" -fuzz 10% -trim +repage \"$i\")",
-      "Bash(do echo -n \"$i: \")"
+      "Bash(do echo -n \"$i: \")",
+      "Bash(grep:*)",
+      "Bash(wc:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
