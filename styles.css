@@ -33,6 +33,79 @@ body {
     border: 0;
 }
 
+/* Utility Classes */
+.section-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 1rem;
+    font-size: 1.1rem;
+}
+
+.section-intro-lg {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+}
+
+.social-links-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-copyright {
+    margin-top: 1.5rem;
+}
+
+.privacy-list {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.privacy-intro {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.privacy-contact-btn {
+    background-color: var(--terracotta);
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.privacy-contact-btn:hover {
+    background-color: #A66950;
+}
+
+.section-gap {
+    margin-top: 3rem;
+}
+
+.card-action-link {
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.muted-text {
+    margin-top: 2rem;
+    color: var(--text-dark);
+    opacity: 0.8;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
     font-weight: 600;
