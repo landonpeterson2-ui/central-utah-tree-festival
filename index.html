@@ -25,13 +25,54 @@
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://centralutahtreefestival.org/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script defer src="https://widgets.givebutter.com/latest.umd.cjs?acct=aPYWSxSupQMAoQcu&p=other"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "Central Utah Tree Festival",
+        "alternateName": "CUTF",
+        "url": "https://centralutahtreefestival.org",
+        "logo": "https://centralutahtreefestival.org/images/central-utah-tree-festival-logo.webp",
+        "description": "Supporting rural families in Sanpete County traveling to Primary Children's Hospital through our annual holiday tree festival and auction.",
+        "foundingDate": "2024",
+        "areaServed": {
+            "@type": "Place",
+            "name": "Sanpete County, Utah"
+        },
+        "nonprofitStatus": "Nonprofit501c3",
+        "mission": "To ensure that every child in Sanpete County can access specialized medical care at Primary Children's Hospital, regardless of their family's financial circumstances.",
+        "sameAs": [
+            "https://www.facebook.com/profile.php?id=61583685786493",
+            "https://www.instagram.com/centralutahtreefestival/",
+            "https://www.tiktok.com/@central.utah.tree"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "info@centralutahtreefestival.org",
+            "contactType": "Customer Service"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "UT",
+            "addressCountry": "US"
+        }
+    }
+    </script>
 </head>
 <body>
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
     <!-- Navigation -->
     <header>
         <nav>
@@ -52,6 +93,7 @@
     </header>
 
     <!-- Hero Section -->
+    <main id="main-content">
     <section class="hero">
         <img src="images/central-utah-tree-festival-logo.webp" alt="Central Utah Tree Festival - Est. 2024" class="hero-logo" width="250" height="250">
         <p>Supporting Rural Families, One Journey at a Time</p>
@@ -292,7 +334,8 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">Our Story</a>
                 <a href="board.html">Our Board</a>
-                <a href="mailto:contact@example.com">Contact</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
             </div>
             
             <!-- Social Media Links -->
@@ -322,6 +365,10 @@
     <div class="floating-donate">
         <givebutter-widget id="Lq548L"></givebutter-widget>
     </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    </main>
 
     <script defer src="script.js"></script>
 </body>

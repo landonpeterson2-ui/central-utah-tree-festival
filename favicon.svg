@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .tree { fill: #5F6D54; }
+      .trunk { fill: #8B6F47; }
+    </style>
+  </defs>
+  <!-- Tree -->
+  <polygon class="tree" points="50,10 30,40 35,40 20,60 25,60 15,80 50,80 85,80 75,60 80,60 65,40 70,40"/>
+  <!-- Trunk -->
+  <rect class="trunk" x="45" y="80" width="10" height="15"/>
+</svg>
