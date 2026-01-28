@@ -30,7 +30,7 @@
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
     color: var(--text-dark);
     line-height: 1.6;
     background-color: var(--cream);
@@ -123,7 +123,7 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
@@ -150,7 +150,7 @@ nav {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--dark-sage);
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
     text-decoration: none;
 }
 
@@ -260,7 +260,7 @@ nav a:hover {
     display: inline-block;
     transition: all 0.3s;
     font-weight: 700;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     letter-spacing: 0.5px;
 }
 
@@ -874,7 +874,7 @@ h2 {
     color: var(--terracotta);
     display: block;
     margin-bottom: 0.5rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
 }
 
 .stat-item .stat-label {
@@ -979,7 +979,7 @@ h2 {
     justify-content: center;
     color: var(--white);
     font-size: 3rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
 }
 
 .member-photo img {
