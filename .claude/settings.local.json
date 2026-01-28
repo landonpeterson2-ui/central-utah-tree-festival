@@ -22,7 +22,8 @@
       "Bash(do echo -n \"$i: \")",
       "Bash(grep:*)",
       "Bash(wc:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git pull:*)"
     ]
   }
 }
