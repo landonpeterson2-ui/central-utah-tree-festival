@@ -84,9 +84,33 @@ if (carouselContainer) {
     }
 }
 
+// Gallery Page Tabs (only runs if tab elements exist)
+const galleryTabs = document.querySelectorAll('.gallery-tab');
+const galleryContents = document.querySelectorAll('.gallery-content');
+
+if (galleryTabs.length > 0) {
+    galleryTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Update active states
+            galleryTabs.forEach(t => {
+                t.classList.remove('active');
+                t.setAttribute('aria-selected', 'false');
+            });
+            galleryContents.forEach(c => c.classList.remove('active'));
+
+            // Activate clicked tab
+            tab.classList.add('active');
+            tab.setAttribute('aria-selected', 'true');
+            const targetId = tab.dataset.target;
+            document.getElementById(targetId).classList.add('active');
+        });
+    });
+}
+
 // Photo Gallery Lightbox (only runs if lightbox elements exist)
 const lightbox = document.getElementById('lightbox');
-const galleryImages = document.querySelectorAll('.carousel-slide img');
+// Support both carousel images and photo grid images
+const galleryImages = document.querySelectorAll('.carousel-slide img, .photo-grid img');
 
 if (lightbox && galleryImages.length > 0) {
     let currentImageIndex = 0;
