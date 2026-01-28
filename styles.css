@@ -5,12 +5,28 @@
 }
 
 :root {
+    /* Colors */
     --sage: #8B9A7E;
     --cream: #F5F1E8;
     --terracotta: #C17B5E;
+    --terracotta-dark: #A66950;
     --dark-sage: #5F6D54;
     --white: #FFFFFF;
     --text-dark: #2C3E2E;
+
+    /* Gradients */
+    --gradient-sage: linear-gradient(135deg, var(--sage) 0%, var(--dark-sage) 100%);
+    --gradient-terracotta: linear-gradient(135deg, var(--terracotta) 0%, var(--terracotta-dark) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+    --shadow-lg: 0 6px 16px rgba(0,0,0,0.15);
+    --shadow-xl: 0 8px 20px rgba(0,0,0,0.2);
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
 }
 
 body {
@@ -115,7 +131,7 @@ h1, h2, h3 {
 /* Header & Navigation */
 header {
     background-color: var(--white);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-sm);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -186,7 +202,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--sage) 0%, var(--dark-sage) 100%);
+    background: var(--gradient-sage);
     color: var(--white);
     padding: 6rem 2rem 4rem;
     text-align: center;
@@ -202,7 +218,7 @@ nav a:hover {
 
 /* Progress Bar Section */
 .progress-section {
-    background: linear-gradient(135deg, var(--sage) 0%, var(--dark-sage) 100%);
+    background: var(--gradient-sage);
     padding: 0 2rem 4rem;
     display: flex;
     justify-content: center;
@@ -305,7 +321,7 @@ h2 {
 
 /* Auction Section */
 .auction {
-    background: linear-gradient(135deg, var(--terracotta) 0%, #A66950 100%);
+    background: var(--gradient-terracotta);
     color: var(--white);
     padding: 4rem 2rem;
     text-align: center;
@@ -753,7 +769,7 @@ h2 {
 
 /* Page Header (About/Board pages) */
 .page-header {
-    background: linear-gradient(135deg, var(--sage) 0%, var(--dark-sage) 100%);
+    background: var(--gradient-sage);
     color: var(--white);
     padding: 5rem 2rem 3rem;
     text-align: center;
@@ -869,7 +885,7 @@ h2 {
 
 /* Call to Action */
 .cta-section {
-    background: linear-gradient(135deg, var(--terracotta) 0%, #A66950 100%);
+    background: var(--gradient-terracotta);
     color: var(--white);
     padding: 3rem 2rem;
     text-align: center;
