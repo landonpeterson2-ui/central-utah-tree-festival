@@ -760,41 +760,70 @@ h2 {
     line-height: 1.4;
 }
 
-/* Stay Updated Section */
-.stay-updated {
-    background-color: var(--dark-sage);
-    color: var(--white);
-    padding: 3rem 2rem;
+/* Stay Connected Section (merged newsletter + social) */
+.stay-connected {
+    background-color: var(--white);
+    padding: 4rem 2rem;
+}
+
+.stay-connected-content {
+    max-width: 700px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.stay-updated h2 {
-    color: var(--white);
+.stay-connected h2 {
+    font-family: 'Playfair Display', serif;
     font-size: 2rem;
+    color: var(--dark-sage);
     margin-bottom: 1rem;
 }
 
-.stay-updated p {
+.stay-connected-intro {
     font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto 1.5rem;
-    opacity: 0.95;
+    color: var(--text-dark);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
 }
 
-.stay-updated-link {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    background-color: var(--white);
-    color: var(--dark-sage);
+.newsletter-wrapper {
+    margin-bottom: 3rem;
+}
+
+.social-media-section {
+    padding-top: 2.5rem;
+    border-top: 2px solid var(--cream);
+}
+
+.social-intro {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--dark-sage);
+    color: var(--white);
     text-decoration: none;
     border-radius: 4px;
     font-weight: 500;
-    transition: all 0.3s;
+    transition: var(--transition-normal);
 }
 
-.stay-updated-link:hover {
-    background-color: var(--cream);
+.social-link:hover {
+    background-color: var(--sage);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.social-link svg {
+    width: 20px;
+    height: 20px;
 }
 
 /* Donation Section */
@@ -1442,9 +1471,13 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    /* Newsletter Mobile Styles */
-    .newsletter-content h2 {
+    /* Stay Connected Mobile Styles */
+    .stay-connected h2 {
         font-size: 1.75rem;
+    }
+
+    .stay-connected-intro {
+        font-size: 1rem;
     }
 
     .newsletter-form-group {
@@ -1454,6 +1487,16 @@ footer {
 
     .newsletter-submit {
         width: 100%;
+    }
+
+    .social-links-row {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .social-link {
+        width: 100%;
+        justify-content: center;
     }
 }
 
@@ -1840,34 +1883,9 @@ footer {
     box-shadow: var(--shadow-lg);
 }
 
-/* Newsletter Signup Section */
-.newsletter-signup {
-    background-color: var(--white);
-    padding: 4rem 2rem;
-}
-
-.newsletter-content {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.newsletter-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: var(--dark-sage);
-    margin-bottom: 1rem;
-}
-
-.newsletter-intro {
-    font-size: 1.1rem;
-    color: var(--text-dark);
-    line-height: 1.7;
-    margin-bottom: 2rem;
-}
-
+/* Newsletter Form Styles (used within Stay Connected section) */
 .newsletter-form {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .newsletter-form-group {
@@ -1989,7 +2007,7 @@ footer {
     .hero,
     .auction,
     .impact,
-    .stay-updated,
+    .stay-connected,
     .page-header {
         background: white !important;
         color: black !important;
@@ -1999,7 +2017,7 @@ footer {
     .hero h1,
     .auction h2,
     .impact h2,
-    .stay-updated h2,
+    .stay-connected h2,
     .page-header h1,
     h1, h2, h3 {
         color: black !important;
