@@ -1441,6 +1441,20 @@ footer {
     .sponsor-benefits {
         grid-template-columns: 1fr;
     }
+
+    /* Newsletter Mobile Styles */
+    .newsletter-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .newsletter-form-group {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .newsletter-submit {
+        width: 100%;
+    }
 }
 
 /* FAQ Page Styles */
@@ -1824,6 +1838,107 @@ footer {
     background-color: var(--cream);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
+}
+
+/* Newsletter Signup Section */
+.newsletter-signup {
+    background-color: var(--white);
+    padding: 4rem 2rem;
+}
+
+.newsletter-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.newsletter-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--dark-sage);
+    margin-bottom: 1rem;
+}
+
+.newsletter-intro {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.newsletter-form {
+    margin-top: 2rem;
+}
+
+.newsletter-form-group {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 500px;
+    margin: 0 auto 1rem;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 0.9rem 1.2rem;
+    border: 2px solid var(--sage);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color var(--transition-normal);
+}
+
+.newsletter-input:focus {
+    outline: none;
+    border-color: var(--terracotta);
+    box-shadow: 0 0 0 3px rgba(193, 123, 94, 0.1);
+}
+
+.newsletter-input::placeholder {
+    color: #999;
+}
+
+.newsletter-submit {
+    padding: 0.9rem 2rem;
+    background: var(--gradient-terracotta);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    font-family: inherit;
+}
+
+.newsletter-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.newsletter-submit:active {
+    transform: translateY(0);
+}
+
+.newsletter-note {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.newsletter-note a {
+    color: var(--terracotta);
+    text-decoration: none;
+    border-bottom: 1px solid var(--terracotta);
+}
+
+.newsletter-note a:hover {
+    color: var(--terracotta-dark);
+}
+
+/* MailerLite form overrides - applies when MailerLite embed is added */
+.ml-embedded,
+.ml-form-embed {
+    max-width: 100%;
 }
 
 /* Print Styles */
