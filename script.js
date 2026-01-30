@@ -28,6 +28,58 @@ if (hamburger && navMenu) {
 // Photo Gallery Carousel (only runs if carousel elements exist)
 const carouselContainer = document.getElementById('carouselContainer');
 if (carouselContainer) {
+    // Gallery images from all festivals
+    const galleryImages = [
+        // 2025 Festival (81 images)
+        ...Array.from({ length: 81 }, (_, i) => `tree-2025-${i + 1}`),
+        // 2024 Festival (42 images)
+        ...Array.from({ length: 42 }, (_, i) => `tree-2024-${i + 1}`)
+    ];
+
+    // Shuffle array using Fisher-Yates algorithm
+    function shuffleArray(array) {
+        const shuffled = [...array];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
+    }
+
+    // Select random images for the carousel
+    const numSlides = 9;
+    const selectedImages = shuffleArray(galleryImages).slice(0, numSlides);
+
+    // Populate carousel slides
+    selectedImages.forEach((imageName, index) => {
+        const slide = document.createElement('div');
+        slide.className = 'carousel-slide';
+
+        const img = document.createElement('img');
+        img.src = `images/${imageName}-800w.webp`;
+        img.srcset = `images/${imageName}-400w.webp 400w, images/${imageName}-800w.webp 800w, images/${imageName}-1200w.webp 1200w`;
+        img.sizes = '(max-width: 768px) 100vw, 400px';
+        img.alt = `Decorated Christmas tree from the Central Utah Tree Festival`;
+        img.loading = index === 0 ? 'eager' : 'lazy';
+        img.width = 400;
+        img.height = 706;
+
+        slide.appendChild(img);
+        carouselContainer.appendChild(slide);
+    });
+
+    // Populate carousel dots
+    const dotsContainer = document.getElementById('carouselDots');
+    if (dotsContainer) {
+        selectedImages.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.className = 'carousel-dot' + (index === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+            dotsContainer.appendChild(dot);
+        });
+    }
+
+    // Now initialize carousel with the dynamically created elements
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel-slide');
     const dots = document.querySelectorAll('.carousel-dot');
@@ -152,9 +204,9 @@ if (lightbox && galleryImages.length > 0) {
     const lightboxNext = lightbox.querySelector('.lightbox-next');
     const lightboxClose = lightbox.querySelector('.lightbox-close');
 
-    // Get full-size image path from responsive image path
+    // Get largest image path from responsive image path (use 1200w for lightbox)
     function getFullSizeSrc(src) {
-        return src.replace(/-\d+w\.webp$/, '.webp');
+        return src.replace(/-\d+w\.webp$/, '-1200w.webp');
     }
 
     function openLightbox(index) {
