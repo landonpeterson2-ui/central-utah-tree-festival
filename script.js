@@ -146,6 +146,7 @@ const galleryImages = document.querySelectorAll('.carousel-slide img, .photo-gri
 
 if (lightbox && galleryImages.length > 0) {
     let currentImageIndex = 0;
+    let lastFocusedElement = null; // Track which element opened the lightbox
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxPrev = lightbox.querySelector('.lightbox-prev');
     const lightboxNext = lightbox.querySelector('.lightbox-next');
@@ -157,16 +158,30 @@ if (lightbox && galleryImages.length > 0) {
     }
 
     function openLightbox(index) {
+        // Store the element that opened the lightbox for focus restoration
+        lastFocusedElement = document.activeElement;
+
         currentImageIndex = index;
         lightboxImg.src = getFullSizeSrc(galleryImages[currentImageIndex].src);
         lightboxImg.alt = galleryImages[currentImageIndex].alt;
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
+
+        // Set focus to close button for keyboard accessibility
+        if (lightboxClose) {
+            lightboxClose.focus();
+        }
     }
 
     function closeLightbox() {
         lightbox.classList.remove('active');
         document.body.style.overflow = '';
+
+        // Restore focus to the element that opened the lightbox
+        if (lastFocusedElement) {
+            lastFocusedElement.focus();
+            lastFocusedElement = null;
+        }
     }
 
     function changeImage(direction) {
@@ -229,17 +244,27 @@ if (lightbox && galleryImages.length > 0) {
     });
 }
 
-// Back to Top Button
+// Back to Top Button with debounced scroll
 const backToTopButton = document.getElementById('backToTop');
 if (backToTopButton) {
-    // Show/hide button based on scroll position
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            backToTopButton.classList.add('visible');
-        } else {
-            backToTopButton.classList.remove('visible');
+    let scrollTimeout;
+
+    // Debounce function to limit scroll event frequency
+    function handleScroll() {
+        if (scrollTimeout) {
+            clearTimeout(scrollTimeout);
         }
-    });
+
+        scrollTimeout = setTimeout(() => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        }, 100); // Check scroll position every 100ms instead of every frame
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     // Scroll to top when clicked
     backToTopButton.addEventListener('click', () => {
@@ -247,5 +272,54 @@ if (backToTopButton) {
             top: 0,
             behavior: 'smooth'
         });
+    });
+}
+
+// Event Countdown Timer
+const countdownElement = document.getElementById('countdown');
+if (countdownElement) {
+    // Set the date for the next festival (December 1, 2025)
+    // Update this date each year or when the exact date is announced
+    const festivalDate = new Date('December 1, 2025 00:00:00').getTime();
+
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
+    const messageEl = document.getElementById('countdown-message');
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = festivalDate - now;
+
+        // If countdown is finished
+        if (distance < 0) {
+            countdownElement.style.display = 'none';
+            messageEl.textContent = 'The festival is happening now!';
+            return;
+        }
+
+        // Calculate time units
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Update DOM
+        if (daysEl) daysEl.textContent = days.toString().padStart(2, '0');
+        if (hoursEl) hoursEl.textContent = hours.toString().padStart(2, '0');
+        if (minutesEl) minutesEl.textContent = minutes.toString().padStart(2, '0');
+        if (secondsEl) secondsEl.textContent = seconds.toString().padStart(2, '0');
+    }
+
+    // Update countdown immediately
+    updateCountdown();
+
+    // Update countdown every second
+    const countdownInterval = setInterval(updateCountdown, 1000);
+
+    // Clean up interval on page unload
+    window.addEventListener('beforeunload', () => {
+        clearInterval(countdownInterval);
     });
 }

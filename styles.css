@@ -1498,6 +1498,24 @@ footer {
         width: 100%;
         justify-content: center;
     }
+
+    /* Countdown Mobile Styles */
+    .countdown-timer {
+        gap: 0.75rem;
+    }
+
+    .countdown-item {
+        min-width: 60px;
+        padding: 0.75rem 0.5rem;
+    }
+
+    .countdown-number {
+        font-size: 2rem;
+    }
+
+    .countdown-label {
+        font-size: 0.75rem;
+    }
 }
 
 /* FAQ Page Styles */
@@ -1881,6 +1899,61 @@ footer {
     background-color: var(--cream);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
+}
+
+/* Event Countdown Section */
+.event-countdown {
+    background: var(--gradient-sage);
+    color: var(--white);
+    padding: 2.5rem 1rem;
+    text-align: center;
+}
+
+.countdown-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    min-width: 80px;
+    backdrop-filter: blur(10px);
+}
+
+.countdown-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.countdown-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.countdown-message {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-top: 1rem;
 }
 
 /* Newsletter Form Styles (used within Stay Connected section) */
