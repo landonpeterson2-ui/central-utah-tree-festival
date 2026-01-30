@@ -1,4 +1,12 @@
+# robots.txt for Central Utah Tree Festival
+# https://centralutahtreefestival.org
+
 User-agent: *
 Allow: /
 
+# Disallow admin areas if they exist in the future
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap
 Sitemap: https://centralutahtreefestival.org/sitemap.xml

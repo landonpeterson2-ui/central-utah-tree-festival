@@ -34,6 +34,7 @@ if (carouselContainer) {
     const prevBtn = document.querySelector('.carousel-prev');
     const nextBtn = document.querySelector('.carousel-next');
     const totalSlides = slides.length;
+    let carouselInterval = null;
 
     function updateCarousel() {
         const offset = -currentSlide * 100;
@@ -62,26 +63,57 @@ if (carouselContainer) {
         updateCarousel();
     }
 
+    function startAutoAdvance() {
+        // Clear any existing interval first
+        if (carouselInterval) {
+            clearInterval(carouselInterval);
+        }
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReducedMotion) {
+            carouselInterval = setInterval(() => {
+                moveCarousel(1);
+            }, 5000);
+        }
+    }
+
+    function stopAutoAdvance() {
+        if (carouselInterval) {
+            clearInterval(carouselInterval);
+            carouselInterval = null;
+        }
+    }
+
     // Carousel navigation button listeners
     if (prevBtn) {
-        prevBtn.addEventListener('click', () => moveCarousel(-1));
+        prevBtn.addEventListener('click', () => {
+            moveCarousel(-1);
+            stopAutoAdvance();
+            startAutoAdvance(); // Restart auto-advance after user interaction
+        });
     }
     if (nextBtn) {
-        nextBtn.addEventListener('click', () => moveCarousel(1));
+        nextBtn.addEventListener('click', () => {
+            moveCarousel(1);
+            stopAutoAdvance();
+            startAutoAdvance(); // Restart auto-advance after user interaction
+        });
     }
 
     // Carousel dot listeners
     dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => goToSlide(index));
+        dot.addEventListener('click', () => {
+            goToSlide(index);
+            stopAutoAdvance();
+            startAutoAdvance(); // Restart auto-advance after user interaction
+        });
     });
 
-    // Auto-advance carousel every 5 seconds (unless user prefers reduced motion)
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!prefersReducedMotion) {
-        setInterval(() => {
-            moveCarousel(1);
-        }, 5000);
-    }
+    // Start auto-advance
+    startAutoAdvance();
+
+    // Clean up interval when page is unloaded
+    window.addEventListener('beforeunload', stopAutoAdvance);
 }
 
 // Gallery Page Tabs (only runs if tab elements exist)

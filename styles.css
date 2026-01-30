@@ -171,6 +171,13 @@ nav a:hover {
     color: var(--terracotta);
 }
 
+nav a.active {
+    color: var(--terracotta);
+    font-weight: 700;
+    border-bottom: 2px solid var(--terracotta);
+    padding-bottom: 2px;
+}
+
 /* Hamburger Menu */
 .hamburger {
     display: none;
@@ -1385,6 +1392,438 @@ footer {
     .year-section h2 {
         font-size: 1.5rem;
     }
+
+    /* FAQ Mobile Styles */
+    .faq-header h1 {
+        font-size: 2rem;
+    }
+
+    .faq-category {
+        padding: 1.5rem;
+    }
+
+    .faq-category h2 {
+        font-size: 1.5rem;
+    }
+
+    .faq-question {
+        font-size: 1rem;
+    }
+
+    .faq-answer {
+        padding-left: 1.5rem;
+    }
+
+    /* Sponsors Mobile Styles */
+    .sponsors-hero h1 {
+        font-size: 2rem;
+    }
+
+    .sponsors-hero p {
+        font-size: 1rem;
+    }
+
+    .tier-title {
+        font-size: 1.5rem;
+    }
+
+    .sponsor-grid.platinum,
+    .sponsor-grid.gold,
+    .sponsor-grid.silver,
+    .sponsor-grid.bronze {
+        grid-template-columns: 1fr;
+    }
+
+    .become-sponsor {
+        padding: 3rem 1.5rem;
+    }
+
+    .sponsor-benefits {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FAQ Page Styles */
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.faq-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--dark-sage);
+    margin-bottom: 1rem;
+}
+
+.faq-intro {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.faq-categories {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.faq-category {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.faq-category h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--terracotta);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--cream);
+    padding-bottom: 0.5rem;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+}
+
+.faq-item:last-child {
+    margin-bottom: 0;
+}
+
+.faq-question {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--dark-sage);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.faq-question::before {
+    content: "Q:";
+    color: var(--terracotta);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.faq-answer {
+    color: var(--text-dark);
+    line-height: 1.7;
+    padding-left: 2rem;
+}
+
+.faq-answer a {
+    color: var(--terracotta);
+    text-decoration: none;
+    border-bottom: 1px solid var(--terracotta);
+}
+
+.faq-answer a:hover {
+    color: var(--terracotta-dark);
+}
+
+.faq-cta {
+    background: var(--gradient-sage);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.faq-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.faq-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.faq-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.faq-btn {
+    background-color: var(--white);
+    color: var(--dark-sage);
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: var(--transition-normal);
+}
+
+.faq-btn:hover {
+    background-color: var(--cream);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.faq-btn.btn-secondary {
+    background-color: var(--terracotta);
+    color: var(--white);
+}
+
+.faq-btn.btn-secondary:hover {
+    background-color: var(--terracotta-dark);
+}
+
+/* Sponsors Page Styles */
+.sponsors-hero {
+    background: var(--gradient-sage);
+    color: var(--white);
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.sponsors-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.sponsors-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.sponsors-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+.sponsors-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.sponsors-intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--dark-sage);
+    margin-bottom: 1rem;
+}
+
+.sponsors-intro p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+.sponsor-tier {
+    margin-bottom: 4rem;
+}
+
+.tier-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tier-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--terracotta);
+    margin-bottom: 0.5rem;
+}
+
+.tier-description {
+    color: var(--text-dark);
+    font-size: 1rem;
+}
+
+.sponsor-grid {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.sponsor-grid.platinum {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.sponsor-grid.gold {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.sponsor-grid.silver {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.sponsor-grid.bronze {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.sponsor-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sponsor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.sponsor-logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+    margin-bottom: 1rem;
+    object-fit: contain;
+}
+
+.sponsor-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--dark-sage);
+    margin-bottom: 0.5rem;
+}
+
+.sponsor-description {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.sponsor-link {
+    color: var(--terracotta);
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 1rem;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    transition: var(--transition-fast);
+}
+
+.sponsor-link:hover {
+    border-bottom-color: var(--terracotta);
+}
+
+.sponsor-placeholder {
+    background: var(--cream);
+    border: 2px dashed var(--sage);
+    padding: 3rem 2rem;
+    text-align: center;
+    color: var(--text-dark);
+    border-radius: 8px;
+}
+
+.sponsor-placeholder h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--dark-sage);
+    margin-bottom: 1rem;
+}
+
+.sponsor-placeholder p {
+    margin-bottom: 1.5rem;
+}
+
+.become-sponsor {
+    background: var(--gradient-terracotta);
+    color: var(--white);
+    padding: 4rem 2rem;
+    border-radius: 12px;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.become-sponsor h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.become-sponsor p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+}
+
+.sponsor-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    text-align: left;
+}
+
+.benefit-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.benefit-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.benefit-item li {
+    padding: 0.3rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.benefit-item li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+
+.sponsor-cta {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--terracotta);
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: var(--transition-normal);
+    margin-top: 1rem;
+}
+
+.sponsor-cta:hover {
+    background-color: var(--cream);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 /* Print Styles */
