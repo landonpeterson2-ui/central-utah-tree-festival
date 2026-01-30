@@ -207,22 +207,47 @@
         <section class="content-section section-gap" id="signup">
             <h2>Sign Up to Volunteer</h2>
             <p class="section-intro">
+                Fill out our quick signup form and we'll be in touch with available shifts and next steps.
+                Volunteers must be 16 or older (those under 18 must volunteer with a guardian).
+            </p>
+
+            <div class="volunteer-form-container" style="text-align: center; padding: 3rem 2rem;">
+                <p style="margin-bottom: 2rem; font-size: 1.1rem;">
+                    Click the button below to open our volunteer signup form.
+                    It only takes a few minutes to complete!
+                </p>
+                <!-- TODO: Replace YOUR_GOOGLE_FORM_ID with actual Google Form ID -->
+                <a href="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/viewform"
+                   target="_blank"
+                   rel="noopener"
+                   class="btn btn-volunteer-submit"
+                   style="display: inline-block; text-decoration: none;">
+                    Open Volunteer Signup Form
+                </a>
+                <p class="form-disclaimer" style="margin-top: 2rem;">
+                    By signing up, you agree to receive email communications about volunteer opportunities.
+                    We respect your privacy and will never share your information.
+                </p>
+            </div>
+        </section>
+
+        <!--
+        ============================================================
+        COMMENTED OUT: Custom Web3Forms form for potential future use
+        ============================================================
+
+        <section class="content-section section-gap" id="signup">
+            <h2>Sign Up to Volunteer</h2>
+            <p class="section-intro">
                 Fill out the form below and we'll be in touch with available shifts and next steps.
                 Volunteers must be 16 or older (those under 18 must volunteer with a guardian).
             </p>
 
             <div class="volunteer-form-container">
                 <form action="https://api.web3forms.com/submit" method="POST" class="volunteer-form" id="volunteerForm">
-                    <!-- Web3Forms Access Key - Replace with your key -->
                     <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
-
-                    <!-- Form subject for email -->
                     <input type="hidden" name="subject" value="New Volunteer Sign-Up - Central Utah Tree Festival">
-
-                    <!-- Redirect after submission (optional) -->
                     <input type="hidden" name="redirect" value="https://centralutahtreefestival.org/volunteers.html?success=true">
-
-                    <!-- Honeypot for spam protection -->
                     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                     <div class="form-row">
@@ -377,7 +402,6 @@
                     </p>
                 </form>
 
-                <!-- Success Message (hidden by default) -->
                 <div class="form-success" id="formSuccess" style="display: none;">
                     <div class="success-icon">&#10003;</div>
                     <h3>Thank You for Signing Up!</h3>
@@ -386,6 +410,10 @@
                 </div>
             </div>
         </section>
+
+        END COMMENTED OUT WEB3FORMS SECTION
+        ============================================================
+        -->
 
         <!-- FAQ Section -->
         <section class="content-section section-gap">
@@ -474,6 +502,8 @@
     </main>
 
     <script defer src="script.js"></script>
+    <!--
+    Commented out: Web3Forms success handler (not needed with Google Forms)
     <script>
         // Check for success parameter and show success message
         document.addEventListener('DOMContentLoaded', function() {
@@ -486,5 +516,6 @@
             }
         });
     </script>
+    -->
 </body>
 </html>

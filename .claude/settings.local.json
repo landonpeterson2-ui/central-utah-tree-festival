@@ -30,7 +30,9 @@
       "Bash(/usr/local/bin/npm init -y)",
       "Bash(/usr/local/bin/npm install sharp)",
       "Bash(npx lighthouse:*)",
-      "Bash(pkill:*)"
+      "Bash(pkill:*)",
+      "Bash(mogrify:*)",
+      "Bash(sort:*)"
     ]
   }
 }
