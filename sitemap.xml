@@ -37,6 +37,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://centralutahtreefestival.org/volunteers.html</loc>
+        <lastmod>2025-01-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://centralutahtreefestival.org/contact.html</loc>
         <lastmod>2025-01-29</lastmod>
         <changefreq>monthly</changefreq>
