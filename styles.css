@@ -616,6 +616,103 @@ h2 {
     right: 20px;
 }
 
+/* Sponsors Highlight Section */
+.sponsors-highlight {
+    background-color: var(--cream);
+    padding: 4rem 2rem;
+}
+
+.sponsors-highlight h2 {
+    text-align: center;
+}
+
+.sponsors-callout {
+    background: var(--gradient-terracotta);
+    color: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.callout-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.callout-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.btn-sponsor {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--terracotta);
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: var(--transition-normal);
+}
+
+.btn-sponsor:hover {
+    background-color: var(--cream);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.sponsor-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sponsor-logo-placeholder {
+    background-color: var(--white);
+    border: 2px dashed var(--sage);
+    border-radius: 8px;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+}
+
+.sponsor-logo-placeholder:hover {
+    border-color: var(--terracotta);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.sponsor-logo-placeholder p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.sponsor-logo-placeholder a {
+    color: var(--terracotta);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 1px solid var(--terracotta);
+}
+
+.sponsor-logo-placeholder a:hover {
+    color: var(--terracotta-dark);
+}
+
 /* Impact Section */
 .impact {
     background-color: #4A5A40;
