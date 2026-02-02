@@ -4,6 +4,8 @@
   "description": "",
   "main": "script.js",
   "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
     "resize-images": "node scripts/resize-images.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,5 +23,8 @@
   "homepage": "https://github.com/landonpeterson2-ui/central-utah-tree-festival#readme",
   "dependencies": {
     "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
   }
 }

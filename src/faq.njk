@@ -1,0 +1,68 @@
+---
+layout: base.njk
+title: Frequently Asked Questions
+description: Find answers to common questions about the Central Utah Tree Festival, including how to participate, donate, and get support for families traveling to Primary Children's Hospital.
+keywords: Central Utah Tree Festival FAQ, frequently asked questions, tree festival help, donate, volunteer, Sanpete County
+givebutter: true
+---
+
+{% block head %}
+<!-- FAQ Schema Markup for Rich Snippets -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {% for category in faq.categories %}
+        {% for item in category.questions %}
+        {
+            "@type": "Question",
+            "name": "{{ item.question }}",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "{{ item.answer }}"
+            }
+        }{% if not loop.last or not loop.parent.last %},{% endif %}
+        {% endfor %}
+        {% endfor %}
+    ]
+}
+</script>
+{% endblock %}
+
+<div class="faq-container">
+    <!-- Header -->
+    <div class="faq-header">
+        <h1>Frequently Asked Questions</h1>
+        <p class="faq-intro">
+            Find answers to common questions about the Central Utah Tree Festival.
+            If you don't see your question here, please <a href="/contact/">contact us</a>.
+        </p>
+    </div>
+
+    <!-- FAQ Categories -->
+    <div class="faq-categories">
+        {% for category in faq.categories %}
+        <div class="faq-category">
+            <h2>{{ category.name }}</h2>
+
+            {% for item in category.questions %}
+            <div class="faq-item">
+                <div class="faq-question">{{ item.question }}</div>
+                <div class="faq-answer">{{ item.answer | safe }}</div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Call to Action -->
+    <div class="faq-cta">
+        <h2>Still Have Questions?</h2>
+        <p>We're here to help! Reach out to us and we'll get back to you as soon as possible.</p>
+        <div class="faq-cta-buttons">
+            <a href="/contact/" class="faq-btn">Contact Us</a>
+            <a href="/#donate" class="faq-btn btn-secondary">Donate Now</a>
+        </div>
+    </div>
+</div>

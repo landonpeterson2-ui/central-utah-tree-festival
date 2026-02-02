@@ -32,7 +32,11 @@
       "Bash(npx lighthouse:*)",
       "Bash(pkill:*)",
       "Bash(mogrify:*)",
-      "Bash(sort:*)"
+      "Bash(sort:*)",
+      "Bash(git checkout:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm start)"
     ]
   }
 }

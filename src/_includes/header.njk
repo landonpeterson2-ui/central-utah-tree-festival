@@ -1,0 +1,20 @@
+<!-- Navigation -->
+<header>
+    <nav>
+        <a href="/" class="logo">Central Utah Tree Festival</a>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="navMenu">
+            <li><a href="/about/"{% if page.url == "/about/" %} class="active"{% endif %}>Our Story</a></li>
+            <li><a href="/#auction">Auction</a></li>
+            <li><a href="/gallery/"{% if page.url == "/gallery/" %} class="active"{% endif %}>Gallery</a></li>
+            <li><a href="/board/"{% if page.url == "/board/" %} class="active"{% endif %}>Our Board</a></li>
+            <li><a href="/sponsors/"{% if page.url == "/sponsors/" %} class="active"{% endif %}>Sponsors</a></li>
+            <li><a href="/volunteers/"{% if page.url == "/volunteers/" %} class="active"{% endif %}>Volunteer</a></li>
+            <li><a href="/faq/"{% if page.url == "/faq/" %} class="active"{% endif %}>FAQ</a></li>
+        </ul>
+    </nav>
+</header>

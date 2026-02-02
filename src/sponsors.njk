@@ -1,0 +1,101 @@
+---
+layout: base.njk
+title: Our Sponsors
+description: Thank you to our generous sponsors who make the Central Utah Tree Festival possible. Learn how your business can become a sponsor and support families in Sanpete County.
+keywords: Central Utah Tree Festival sponsors, business sponsorship, Sanpete County support, community partners
+givebutter: true
+---
+
+<!-- Hero Section -->
+<section class="sponsors-hero">
+    <h1>Our Sponsors</h1>
+    <p>
+        Thank you to our generous sponsors and community partners who make our mission possible.
+        Together, we're helping families access the care their children need.
+    </p>
+</section>
+
+<div class="sponsors-container">
+    <!-- Introduction -->
+    <div class="sponsors-intro">
+        <h2>Community Partnership</h2>
+        <p>{{ sponsors.intro }}</p>
+    </div>
+
+    <!-- Sponsor Tiers -->
+    {% for tier in sponsors.tiers %}
+    <div class="sponsor-tier">
+        <div class="tier-header">
+            <h2 class="tier-title">{{ tier.name }}</h2>
+            <p class="tier-description">{{ tier.contribution }}</p>
+        </div>
+
+        {% if tier.sponsors.length > 0 %}
+        <div class="sponsor-logos">
+            {% for sponsor in tier.sponsors %}
+            <div class="sponsor-logo">
+                {% if sponsor.logo %}
+                <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" loading="lazy">
+                {% else %}
+                <p>{{ sponsor.name }}</p>
+                {% endif %}
+                {% if sponsor.url %}
+                <a href="{{ sponsor.url }}" target="_blank" rel="noopener">Visit Website</a>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="sponsor-placeholder">
+            <h3>{{ sponsors.placeholders[tier.level].title }}</h3>
+            <p>{{ sponsors.placeholders[tier.level].text }}</p>
+            <a href="/contact/" class="sponsor-cta">Learn More</a>
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+
+    <!-- Become a Sponsor Section -->
+    <section class="become-sponsor">
+        <h2>Become a Sponsor</h2>
+        <p>
+            Your business can make a real difference in the lives of families throughout Sanpete County.
+            Sponsorship with the Central Utah Tree Festival demonstrates your commitment to community health
+            and family support while gaining valuable visibility and recognition.
+        </p>
+
+        <div class="sponsor-benefits">
+            <div class="benefit-item">
+                <h3>Platinum Benefits</h3>
+                <ul>
+                    {% for benefit in sponsors.tiers[0].benefits %}
+                    <li>{{ benefit }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="benefit-item">
+                <h3>Gold Benefits</h3>
+                <ul>
+                    {% for benefit in sponsors.tiers[1].benefits %}
+                    <li>{{ benefit }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="benefit-item">
+                <h3>Silver & Bronze Benefits</h3>
+                <ul>
+                    {% for benefit in sponsors.tiers[2].benefits %}
+                    <li>{{ benefit }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <p style="margin-top: 2rem;">
+            <strong>All sponsorships are tax-deductible.</strong><br>
+            Central Utah Tree Festival is a 501(c)(3) nonprofit organization.
+        </p>
+
+        <a href="/contact/" class="sponsor-cta">Contact Us About Sponsorship</a>
+    </section>
+</div>

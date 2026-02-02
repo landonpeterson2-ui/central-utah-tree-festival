@@ -1,0 +1,85 @@
+{
+  "intro": "The Central Utah Tree Festival is made possible through the generous support of local businesses, organizations, and community members who share our commitment to helping families in Sanpete County. Our sponsors play a vital role in ensuring that no child is denied specialized medical care due to travel costs.",
+  "tiers": [
+    {
+      "name": "Platinum Sponsors",
+      "level": "platinum",
+      "contribution": "$5,000+ contribution",
+      "benefits": [
+        "Premier logo placement on all materials",
+        "Dedicated social media recognition",
+        "Speaking opportunity at event",
+        "VIP event access",
+        "Website homepage recognition",
+        "Press release mention"
+      ],
+      "sponsors": []
+    },
+    {
+      "name": "Gold Sponsors",
+      "level": "gold",
+      "contribution": "$2,500 - $4,999 contribution",
+      "benefits": [
+        "Logo on event signage",
+        "Social media recognition",
+        "Event program listing",
+        "Website sponsor page feature",
+        "Newsletter recognition"
+      ],
+      "sponsors": []
+    },
+    {
+      "name": "Silver Sponsors",
+      "level": "silver",
+      "contribution": "$1,000 - $2,499 contribution",
+      "benefits": [
+        "Logo on sponsor materials",
+        "Social media mention",
+        "Event program listing",
+        "Website recognition"
+      ],
+      "sponsors": []
+    },
+    {
+      "name": "Bronze Sponsors",
+      "level": "bronze",
+      "contribution": "$500 - $999 contribution",
+      "benefits": [
+        "Logo on sponsor materials",
+        "Social media mention",
+        "Event program listing",
+        "Website recognition"
+      ],
+      "sponsors": []
+    },
+    {
+      "name": "Community Partners",
+      "level": "community",
+      "contribution": "In-kind donations and volunteer support",
+      "benefits": [],
+      "sponsors": []
+    }
+  ],
+  "placeholders": {
+    "platinum": {
+      "title": "Become Our First Platinum Sponsor",
+      "text": "Help lead the way in supporting families throughout Sanpete County."
+    },
+    "gold": {
+      "title": "Join Our Gold Sponsors",
+      "text": "Make a significant impact on families in need of support."
+    },
+    "silver": {
+      "title": "Become a Silver Sponsor",
+      "text": "Support families with meaningful contributions to their journey."
+    },
+    "bronze": {
+      "title": "Join Our Bronze Sponsors",
+      "text": "Every contribution helps cover travel costs for families."
+    },
+    "community": {
+      "title": "Become a Community Partner",
+      "text": "Donate trees, decorations, supplies, or your time and talents."
+    }
+  }
+}

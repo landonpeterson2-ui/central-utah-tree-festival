@@ -1,0 +1,40 @@
+---
+layout: base.njk
+title: Our Board of Directors
+description: Meet the dedicated volunteers on the Central Utah Tree Festival board of directors. Our community leaders guide the mission to connect rural children with specialized medical care.
+keywords: Central Utah Tree Festival board, nonprofit leadership, Sanpete County volunteers, charity board members
+---
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Our Board of Directors</h1>
+    <p>Meet the dedicated volunteers leading our mission to connect rural children with specialized medical care</p>
+</section>
+
+<!-- Board Members Section -->
+<section class="board-section">
+    <div class="container">
+        <div class="board-intro">
+            <p>{{ board.intro }}</p>
+        </div>
+
+        <div class="board-grid">
+            {% for member in board.members %}
+            <div class="board-member">
+                <div class="member-photo">
+                    {% if member.photo %}
+                    <img src="{{ member.photo }}" alt="{{ member.name }} - {{ member.title }}" loading="lazy">
+                    {% else %}
+                    Photo
+                    {% endif %}
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">{{ member.name }}</h3>
+                    <div class="member-title">{{ member.title }}</div>
+                    <p class="member-bio">{{ member.bio }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

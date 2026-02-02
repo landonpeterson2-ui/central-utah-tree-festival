@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Central Utah Tree Festival</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{ keywords | default('Central Utah Tree Festival, Sanpete County, Primary Children\'s Hospital, charity, children\'s healthcare') }}">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="{{ ogTitle | default(title) }} - Central Utah Tree Festival">
+    <meta property="og:description" content="{{ ogDescription | default(description) }}">
+    <meta property="og:image" content="https://centralutahtreefestival.org/images/central-utah-tree-festival-logo.webp">
+    <meta property="og:url" content="https://centralutahtreefestival.org{{ page.url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Central Utah Tree Festival">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title }} - Central Utah Tree Festival">
+    <meta name="twitter:description" content="{{ twitterDescription | default(description) }}">
+    <meta name="twitter:image" content="https://centralutahtreefestival.org/images/central-utah-tree-festival-logo.webp">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://centralutahtreefestival.org{{ page.url }}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#5F6D54">
+
+    <!-- Fonts - loaded asynchronously to prevent render blocking -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=optional"></noscript>
+
+    {% if givebutter %}
+    <script defer src="https://widgets.givebutter.com/latest.umd.cjs?acct=aPYWSxSupQMAoQcu&p=other"></script>
+    {% endif %}
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    {% include "header.njk" %}
+
+    <main id="main-content">
+        {{ content | safe }}
+    </main>
+
+    {% include "footer.njk" %}
+
+    {% if givebutter %}
+    <!-- Floating Donate Widget -->
+    <div class="floating-donate">
+        <givebutter-widget id="Lq548L"></givebutter-widget>
+    </div>
+    {% endif %}
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <script defer src="/script.js"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

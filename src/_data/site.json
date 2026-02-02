@@ -1,0 +1,19 @@
+{
+  "name": "Central Utah Tree Festival",
+  "url": "https://centralutahtreefestival.org",
+  "email": "info@centralutahtreefestival.org",
+  "currentYear": "2025",
+  "social": {
+    "facebook": "https://www.facebook.com/profile.php?id=61583685786493",
+    "instagram": "https://www.instagram.com/centralutahtreefestival/",
+    "tiktok": "https://www.tiktok.com/@central.utah.tree"
+  },
+  "event": {
+    "nextDate": "November 18, 2026",
+    "auctionUrl": "https://givebutter.com/c/Z1ZX2I/auction"
+  },
+  "givebutter": {
+    "progressWidgetId": "LWlmXg",
+    "donateWidgetId": "Lq548L"
+  }
+}

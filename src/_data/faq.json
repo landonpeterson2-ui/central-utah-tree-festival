@@ -1,0 +1,109 @@
+{
+  "categories": [
+    {
+      "name": "About the Festival",
+      "questions": [
+        {
+          "question": "What is the Central Utah Tree Festival?",
+          "answer": "The Central Utah Tree Festival is an annual holiday event featuring beautifully decorated Christmas trees and wreaths available through a silent auction. All proceeds go directly to supporting families in Sanpete County who need to travel to Primary Children's Hospital for their child's specialized medical care."
+        },
+        {
+          "question": "When and where does the festival take place?",
+          "answer": "The festival typically runs in early December. Specific dates, times, and locations are announced on our website and social media channels."
+        },
+        {
+          "question": "Is the festival free to attend?",
+          "answer": "Yes! The festival is free to attend. You're welcome to browse the decorated trees and wreaths, enjoy the festive atmosphere, and learn more about our mission. Participation in the auction and raffle is optional."
+        },
+        {
+          "question": "Who benefits from the festival?",
+          "answer": "Families in Sanpete County whose children require specialized medical care at Primary Children's Hospital. We help cover travel expenses including gas, meals, and lodging for these essential trips."
+        }
+      ]
+    },
+    {
+      "name": "Participating in the Auction",
+      "questions": [
+        {
+          "question": "How does the silent auction work?",
+          "answer": "Our silent auction is conducted online through Givebutter. You can browse available items, place bids, and track your bids in real-time. The auction typically runs for several days, and the highest bidder at closing wins the item."
+        },
+        {
+          "question": "Can I bid on multiple items?",
+          "answer": "Absolutely! You can bid on as many trees, wreaths, and other items as you'd like."
+        },
+        {
+          "question": "How do I pick up my winning bid?",
+          "answer": "Pickup arrangements are coordinated after the auction closes. We'll contact all winning bidders with details about pickup locations and times. In some cases, delivery may be available."
+        },
+        {
+          "question": "What payment methods do you accept?",
+          "answer": "We accept all major credit cards and digital payment methods through our Givebutter platform."
+        }
+      ]
+    },
+    {
+      "name": "Decorating & Donating",
+      "questions": [
+        {
+          "question": "How can I donate a tree or wreath to the auction?",
+          "answer": "We'd love to have you participate! Please contact us to express your interest. We'll provide guidelines for decorating and coordinate drop-off arrangements."
+        },
+        {
+          "question": "Do I need to provide the tree, or just the decorations?",
+          "answer": "Ideally, donors provide both the tree (real or artificial) and all decorations. However, if you'd like to decorate but need assistance with the tree, please reach out—we may be able to help."
+        },
+        {
+          "question": "Are there theme requirements for decorated trees?",
+          "answer": "No specific requirements! We love seeing creativity and diversity in themes. Popular themes include traditional Christmas, winter wonderland, rustic farmhouse, candy cane, elegant metallics, children's favorites, and nature-inspired designs."
+        },
+        {
+          "question": "Can businesses sponsor or donate items?",
+          "answer": "Yes! We welcome business sponsorships and donations. Visit our Sponsors page to learn more about sponsorship opportunities, or contact us directly."
+        },
+        {
+          "question": "Can I make a monetary donation instead?",
+          "answer": "Absolutely! Every donation helps. You can donate directly on our homepage or during the auction event. 100% of donations go directly to supporting families."
+        }
+      ]
+    },
+    {
+      "name": "Getting Support",
+      "questions": [
+        {
+          "question": "Who is eligible for support?",
+          "answer": "Families residing in Sanpete County whose children require specialized medical care at Primary Children's Hospital are eligible. We prioritize families facing financial hardship related to travel expenses."
+        },
+        {
+          "question": "How do I apply for assistance?",
+          "answer": "You can fill out our support application form online. All information is kept confidential."
+        },
+        {
+          "question": "What expenses does the festival cover?",
+          "answer": "We help with travel-related expenses including gas, meals, and lodging for families traveling to and from Primary Children's Hospital."
+        },
+        {
+          "question": "How quickly can I receive support?",
+          "answer": "We process applications as quickly as possible. Once approved, we work with families to coordinate support for their upcoming trips."
+        }
+      ]
+    },
+    {
+      "name": "Volunteering",
+      "questions": [
+        {
+          "question": "How can I volunteer?",
+          "answer": "We need volunteers for setup, event coordination, and tree delivery. Please contact us to learn about current volunteer opportunities."
+        },
+        {
+          "question": "What volunteer opportunities are available?",
+          "answer": "Opportunities include event setup and teardown, greeting visitors, assisting with the auction, coordinating pickups and deliveries, marketing and social media support, and year-round planning and coordination."
+        },
+        {
+          "question": "Is this a 501(c)(3) organization?",
+          "answer": "Yes, Central Utah Tree Festival is a registered 501(c)(3) nonprofit organization. Donations are tax-deductible to the extent allowed by law."
+        }
+      ]
+    }
+  ]
+}
