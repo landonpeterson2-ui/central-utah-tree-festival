@@ -2,6 +2,7 @@ backend:
   name: github
   repo: landonpeterson2-ui/central-utah-tree-festival
   branch: main
+  base_url: https://sveltia-cms-auth.landon-peterson2.workers.dev
 
 media_folder: "src/images"
 public_folder: "/images"
