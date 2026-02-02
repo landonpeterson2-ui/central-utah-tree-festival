@@ -2,140 +2,134 @@ backend:
   name: github
   repo: landonpeterson2-ui/central-utah-tree-festival
   branch: main
-  base_url: https://centralutahtreefestival.org
-  auth_endpoint: /api/auth
-
-# When using the default proxy server
-local_backend: true
 
 media_folder: "src/images"
 public_folder: "/images"
 
 collections:
-  # Board Members
-  - name: "board"
-    label: "Board Members"
-    file: "src/_data/board.json"
-    description: "Manage board member information"
-    fields:
-      - label: "Introduction Text"
-        name: "intro"
-        widget: "text"
-        hint: "The introductory paragraph shown above the board member grid"
-      - label: "Board Members"
-        name: "members"
-        widget: "list"
+  - name: "data"
+    label: "Site Content"
+    files:
+      # Board Members
+      - name: "board"
+        label: "Board Members"
+        file: "src/_data/board.json"
         fields:
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Photo", name: "photo", widget: "image", required: false, hint: "Upload a photo or leave blank for placeholder" }
-          - { label: "Bio", name: "bio", widget: "text" }
-
-  # FAQ
-  - name: "faq"
-    label: "FAQ"
-    file: "src/_data/faq.json"
-    description: "Manage frequently asked questions"
-    fields:
-      - label: "FAQ Categories"
-        name: "categories"
-        widget: "list"
-        fields:
-          - { label: "Category Name", name: "name", widget: "string" }
-          - label: "Questions"
-            name: "questions"
+          - label: "Introduction Text"
+            name: "intro"
+            widget: "text"
+            hint: "The introductory paragraph shown above the board member grid"
+          - label: "Board Members"
+            name: "members"
             widget: "list"
-            fields:
-              - { label: "Question", name: "question", widget: "string" }
-              - { label: "Answer", name: "answer", widget: "text" }
-
-  # Sponsors
-  - name: "sponsors"
-    label: "Sponsors"
-    file: "src/_data/sponsors.json"
-    description: "Manage sponsor information"
-    fields:
-      - { label: "Introduction Text", name: "intro", widget: "text" }
-      - label: "Sponsor Tiers"
-        name: "tiers"
-        widget: "list"
-        fields:
-          - { label: "Tier Name", name: "name", widget: "string" }
-          - { label: "Tier Level (internal)", name: "level", widget: "string" }
-          - { label: "Contribution Amount", name: "contribution", widget: "string" }
-          - label: "Benefits"
-            name: "benefits"
-            widget: "list"
-            field: { label: "Benefit", name: "benefit", widget: "string" }
-          - label: "Sponsors"
-            name: "sponsors"
-            widget: "list"
-            required: false
             fields:
               - { label: "Name", name: "name", widget: "string" }
-              - { label: "Logo", name: "logo", widget: "image", required: false }
-              - { label: "Website URL", name: "url", widget: "string", required: false }
-      - label: "Placeholder Messages"
-        name: "placeholders"
-        widget: "object"
-        fields:
-          - label: "Platinum"
-            name: "platinum"
-            widget: "object"
-            fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Text", name: "text", widget: "string" }
-          - label: "Gold"
-            name: "gold"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Text", name: "text", widget: "string" }
-          - label: "Silver"
-            name: "silver"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Text", name: "text", widget: "string" }
-          - label: "Bronze"
-            name: "bronze"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Text", name: "text", widget: "string" }
-          - label: "Community"
-            name: "community"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Text", name: "text", widget: "string" }
+              - { label: "Photo", name: "photo", widget: "image", required: false, hint: "Upload a photo or leave blank for placeholder" }
+              - { label: "Bio", name: "bio", widget: "text" }
 
-  # Site Settings
-  - name: "settings"
-    label: "Site Settings"
-    file: "src/_data/site.json"
-    description: "Global site settings"
-    fields:
-      - { label: "Site Name", name: "name", widget: "string" }
-      - { label: "Site URL", name: "url", widget: "string" }
-      - { label: "Contact Email", name: "email", widget: "string" }
-      - { label: "Copyright Year", name: "currentYear", widget: "string" }
-      - label: "Social Media Links"
-        name: "social"
-        widget: "object"
+      # FAQ
+      - name: "faq"
+        label: "FAQ"
+        file: "src/_data/faq.json"
         fields:
-          - { label: "Facebook URL", name: "facebook", widget: "string" }
-          - { label: "Instagram URL", name: "instagram", widget: "string" }
-          - { label: "TikTok URL", name: "tiktok", widget: "string" }
-      - label: "Event Info"
-        name: "event"
-        widget: "object"
+          - label: "FAQ Categories"
+            name: "categories"
+            widget: "list"
+            fields:
+              - { label: "Category Name", name: "name", widget: "string" }
+              - label: "Questions"
+                name: "questions"
+                widget: "list"
+                fields:
+                  - { label: "Question", name: "question", widget: "string" }
+                  - { label: "Answer", name: "answer", widget: "text" }
+
+      # Site Settings
+      - name: "settings"
+        label: "Site Settings"
+        file: "src/_data/site.json"
         fields:
-          - { label: "Next Event Date", name: "nextDate", widget: "string", hint: "e.g., November 18, 2026" }
-          - { label: "Auction URL", name: "auctionUrl", widget: "string" }
-      - label: "Givebutter Widget IDs"
-        name: "givebutter"
-        widget: "object"
+          - { label: "Site Name", name: "name", widget: "string" }
+          - { label: "Site URL", name: "url", widget: "string" }
+          - { label: "Contact Email", name: "email", widget: "string" }
+          - { label: "Copyright Year", name: "currentYear", widget: "string" }
+          - label: "Social Media Links"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Facebook URL", name: "facebook", widget: "string" }
+              - { label: "Instagram URL", name: "instagram", widget: "string" }
+              - { label: "TikTok URL", name: "tiktok", widget: "string" }
+          - label: "Event Info"
+            name: "event"
+            widget: "object"
+            fields:
+              - { label: "Next Event Date", name: "nextDate", widget: "string", hint: "e.g., November 18, 2026" }
+              - { label: "Auction URL", name: "auctionUrl", widget: "string" }
+          - label: "Givebutter Widget IDs"
+            name: "givebutter"
+            widget: "object"
+            fields:
+              - { label: "Progress Widget ID", name: "progressWidgetId", widget: "string" }
+              - { label: "Donate Widget ID", name: "donateWidgetId", widget: "string" }
+
+      # Sponsors
+      - name: "sponsors"
+        label: "Sponsors"
+        file: "src/_data/sponsors.json"
         fields:
-          - { label: "Progress Widget ID", name: "progressWidgetId", widget: "string" }
-          - { label: "Donate Widget ID", name: "donateWidgetId", widget: "string" }
+          - { label: "Introduction Text", name: "intro", widget: "text" }
+          - label: "Sponsor Tiers"
+            name: "tiers"
+            widget: "list"
+            fields:
+              - { label: "Tier Name", name: "name", widget: "string" }
+              - { label: "Tier Level (internal)", name: "level", widget: "string" }
+              - { label: "Contribution Amount", name: "contribution", widget: "string" }
+              - label: "Benefits"
+                name: "benefits"
+                widget: "list"
+                field: { label: "Benefit", name: "benefit", widget: "string" }
+              - label: "Sponsors"
+                name: "sponsors"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Logo", name: "logo", widget: "image", required: false }
+                  - { label: "Website URL", name: "url", widget: "string", required: false }
+          - label: "Placeholder Messages"
+            name: "placeholders"
+            widget: "object"
+            fields:
+              - label: "Platinum"
+                name: "platinum"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string" }
+              - label: "Gold"
+                name: "gold"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string" }
+              - label: "Silver"
+                name: "silver"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string" }
+              - label: "Bronze"
+                name: "bronze"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string" }
+              - label: "Community"
+                name: "community"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string" }
