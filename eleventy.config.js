@@ -1,13 +1,12 @@
 module.exports = function(eleventyConfig) {
   // Copy static assets to output
   eleventyConfig.addPassthroughCopy("src/images");
-  eleventyConfig.addPassthroughCopy("src/styles.css");
   eleventyConfig.addPassthroughCopy("src/script.js");
   eleventyConfig.addPassthroughCopy("src/favicon.svg");
   eleventyConfig.addPassthroughCopy("src/admin");
 
   // Watch for changes in CSS and JS
-  eleventyConfig.addWatchTarget("src/styles.css");
+  eleventyConfig.addWatchTarget("src/_includes/css/");
   eleventyConfig.addWatchTarget("src/script.js");
 
   return {

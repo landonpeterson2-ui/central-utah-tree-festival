@@ -75,6 +75,20 @@ collections:
               - { label: "Progress Widget ID", name: "progressWidgetId", widget: "string" }
               - { label: "Donate Widget ID", name: "donateWidgetId", widget: "string" }
 
+      # Committees
+      - name: "committees"
+        label: "Committees"
+        file: "src/_data/committees.json"
+        fields:
+          - label: "Committees"
+            name: "committees"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Icon", name: "icon", widget: "select", options: ["ticket", "calendar", "share", "heart"], hint: "Choose an icon for this committee" }
+              - { label: "We Need Help With", name: "needs", widget: "string", hint: "Comma-separated list of skills or tasks needed" }
+
       # Sponsors
       - name: "sponsors"
         label: "Sponsors"

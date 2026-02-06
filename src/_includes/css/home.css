@@ -1,0 +1,398 @@
+/* ============================================
+   Home Page Sections
+   ============================================ */
+
+/* Hero Section */
+.hero {
+    background: var(--gradient-sage);
+    color: var(--white);
+    padding: 6rem 2rem 4rem;
+    text-align: center;
+}
+
+.hero-logo {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 2rem;
+    display: block;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Progress Bar Section */
+.progress-section {
+    background: var(--gradient-sage);
+    padding: 0 2rem 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.progress-container {
+    max-width: 700px;
+    width: 100%;
+}
+
+/* Event Countdown Section */
+.event-countdown {
+    background: var(--gradient-sage);
+    color: var(--white);
+    padding: 2.5rem 1rem;
+    text-align: center;
+}
+
+.countdown-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    min-width: 80px;
+    backdrop-filter: blur(10px);
+}
+
+.countdown-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.countdown-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.countdown-message {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-top: 1rem;
+}
+
+/* Mission Section */
+.mission {
+    background-color: var(--white);
+    padding: 4rem 2rem;
+}
+
+.mission-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mission-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Auction Section */
+.auction {
+    background: var(--gradient-terracotta);
+    color: var(--white);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.auction h2 {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.auction-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.auction-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.auction-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2.5rem 0;
+    text-align: center;
+}
+
+.auction-feature {
+    padding: 1.5rem;
+}
+
+.auction-feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.auction-feature h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.auction-feature p {
+    font-size: 0.95rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Gallery Section (Home) */
+.gallery {
+    background-color: var(--cream);
+    padding: 4rem 2rem;
+}
+
+/* How to Help Section */
+.how-to-help {
+    background-color: var(--white);
+    padding: 4rem 2rem;
+}
+
+.help-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Sponsors Highlight Section */
+.sponsors-highlight {
+    background-color: var(--cream);
+    padding: 4rem 2rem;
+}
+
+.sponsors-highlight h2 {
+    text-align: center;
+}
+
+.sponsors-callout {
+    background: var(--gradient-terracotta);
+    color: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.callout-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.callout-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.btn-sponsor {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--terracotta);
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: var(--transition-normal);
+}
+
+.btn-sponsor:hover {
+    background-color: var(--cream);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.sponsor-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sponsor-logo-placeholder {
+    background-color: var(--white);
+    border: 2px dashed var(--sage);
+    border-radius: 8px;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+}
+
+.sponsor-logo-placeholder:hover {
+    border-color: var(--terracotta);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.sponsor-logo-placeholder p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.sponsor-logo-placeholder a {
+    color: var(--terracotta);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 1px solid var(--terracotta);
+}
+
+.sponsor-logo-placeholder a:hover {
+    color: var(--terracotta-dark);
+}
+
+/* Impact Section */
+.impact {
+    background-color: #4A5A40;
+    color: var(--white);
+    padding: 4rem 2rem;
+}
+
+.impact h2 {
+    color: var(--white);
+}
+
+.impact-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+/* Stay Connected Section */
+.stay-connected {
+    background-color: var(--white);
+    padding: 4rem 2rem;
+}
+
+.stay-connected-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stay-connected h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--dark-sage);
+    margin-bottom: 1rem;
+}
+
+.stay-connected-intro {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+
+.newsletter-wrapper {
+    margin-bottom: 3rem;
+}
+
+.social-media-section {
+    padding-top: 2.5rem;
+    border-top: 2px solid var(--cream);
+}
+
+.social-intro {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+/* Donation Section */
+.donation {
+    background-color: var(--white);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.donation-embed {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--cream);
+    border-radius: 8px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

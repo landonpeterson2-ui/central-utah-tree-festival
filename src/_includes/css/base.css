@@ -1,0 +1,133 @@
+/* ============================================
+   Base - Reset, Variables, Typography, Utilities
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors */
+    --sage: #8B9A7E;
+    --cream: #F5F1E8;
+    --terracotta: #C17B5E;
+    --terracotta-dark: #A66950;
+    --dark-sage: #5F6D54;
+    --white: #FFFFFF;
+    --text-dark: #2C3E2E;
+
+    /* Gradients */
+    --gradient-sage: linear-gradient(135deg, var(--sage) 0%, var(--dark-sage) 100%);
+    --gradient-terracotta: linear-gradient(135deg, var(--terracotta) 0%, var(--terracotta-dark) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+    --shadow-lg: 0 6px 16px rgba(0,0,0,0.15);
+    --shadow-xl: 0 8px 20px rgba(0,0,0,0.2);
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+}
+
+body {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--cream);
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Visually hidden but accessible to screen readers */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Utility Classes */
+.section-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 1rem;
+    font-size: 1.1rem;
+}
+
+.section-intro-lg {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+}
+
+.social-links-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-copyright {
+    margin-top: 1.5rem;
+}
+
+.privacy-list {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.privacy-intro {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.privacy-contact-btn {
+    background-color: var(--terracotta);
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.privacy-contact-btn:hover {
+    background-color: #A66950;
+}
+
+.section-gap {
+    margin-top: 3rem;
+}
+
+.card-action-link {
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.muted-text {
+    margin-top: 2rem;
+    color: var(--text-dark);
+    opacity: 0.8;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}

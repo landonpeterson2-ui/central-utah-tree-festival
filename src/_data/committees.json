@@ -1,0 +1,28 @@
+{
+  "committees": [
+    {
+      "name": "Raffle & Auction",
+      "description": "Organize and manage the silent auction and raffle — from sourcing items and setting up displays to coordinating bidding and winner notifications.",
+      "icon": "ticket",
+      "needs": "Item procurement, pricing, display setup, checkout coordination"
+    },
+    {
+      "name": "Event Coordination",
+      "description": "Plan and execute the festival logistics — venue setup, scheduling, day-of operations, and making sure everything runs smoothly from start to finish.",
+      "icon": "calendar",
+      "needs": "Planning, scheduling, vendor coordination, on-site management"
+    },
+    {
+      "name": "Web & Social Media",
+      "description": "Manage our online presence — website updates, social media content, photography, and spreading the word about the festival and our mission.",
+      "icon": "share",
+      "needs": "Content creation, photography, graphic design, community engagement"
+    },
+    {
+      "name": "Fundraising & Sponsorship",
+      "description": "Build relationships with local businesses and donors to secure sponsorships, in-kind donations, and funding that makes the festival possible.",
+      "icon": "heart",
+      "needs": "Outreach, relationship building, grant writing, donor communications"
+    }
+  ]
+}

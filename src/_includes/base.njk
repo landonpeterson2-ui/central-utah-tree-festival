@@ -35,12 +35,16 @@
     <!-- Fonts - loaded asynchronously to prevent render blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="/styles.css">
+    <!-- Critical CSS inlined for fast first paint -->
+    <style>{% include "css/critical.css" %}</style>
+    <!-- Full stylesheet loaded asynchronously -->
+    <link rel="preload" href="/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles.css"></noscript>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=optional"></noscript>
 
     {% if givebutter %}
-    <script defer src="https://widgets.givebutter.com/latest.umd.cjs?acct=aPYWSxSupQMAoQcu&p=other"></script>
+    <!-- Givebutter script lazy-loaded when widgets enter viewport -->
     {% endif %}
 
     {% block head %}{% endblock %}
@@ -68,6 +72,35 @@
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
     <script defer src="/script.js"></script>
+    {% if givebutter %}
+    <script>
+    (function() {
+        var loaded = false;
+        function loadGivebutter() {
+            if (loaded) return;
+            loaded = true;
+            var s = document.createElement('script');
+            s.src = 'https://widgets.givebutter.com/latest.umd.cjs?acct=aPYWSxSupQMAoQcu&p=other';
+            document.body.appendChild(s);
+        }
+        var widgets = document.querySelectorAll('givebutter-widget');
+        if ('IntersectionObserver' in window && widgets.length) {
+            var observer = new IntersectionObserver(function(entries) {
+                for (var i = 0; i < entries.length; i++) {
+                    if (entries[i].isIntersecting) {
+                        loadGivebutter();
+                        observer.disconnect();
+                        return;
+                    }
+                }
+            }, { rootMargin: '200px' });
+            widgets.forEach(function(w) { observer.observe(w); });
+        } else if (widgets.length) {
+            loadGivebutter();
+        }
+    })();
+    </script>
+    {% endif %}
     {% block scripts %}{% endblock %}
 </body>
 </html>

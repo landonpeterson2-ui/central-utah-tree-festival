@@ -40,7 +40,9 @@
       "Bash(git merge:*)",
       "Bash(git push)",
       "Bash(git stash:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "WebFetch(domain:givebutter.com)",
+      "WebFetch(domain:help.givebutter.com)"
     ]
   }
 }

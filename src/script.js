@@ -330,9 +330,9 @@ if (backToTopButton) {
 // Event Countdown Timer
 const countdownElement = document.getElementById('countdown');
 if (countdownElement) {
-    // Set the date for the next festival (November 25, 2026)
-    // Update this date each year or when the exact date is announced
-    const festivalDate = new Date('November 18, 2026 00:00:00').getTime();
+    // Read the event date from the data attribute (set via site.json in the template)
+    const eventDateStr = countdownElement.dataset.eventDate;
+    const festivalDate = new Date(eventDateStr + ' 00:00:00').getTime();
 
     const daysEl = document.getElementById('days');
     const hoursEl = document.getElementById('hours');

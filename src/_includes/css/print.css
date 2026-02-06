@@ -1,0 +1,128 @@
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+    /* Hide non-essential elements */
+    header,
+    .hamburger,
+    .skip-to-content,
+    .back-to-top,
+    .floating-donate,
+    .carousel-nav,
+    .carousel-dots,
+    .lightbox,
+    .cta-buttons,
+    .btn,
+    .btn-auction,
+    .footer-social,
+    .gallery-tabs,
+    .video-grid,
+    givebutter-widget {
+        display: none !important;
+    }
+
+    .gallery-content {
+        display: block !important;
+    }
+
+    .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+
+    .photo-grid img {
+        aspect-ratio: auto;
+        height: auto;
+        max-height: 200px;
+    }
+
+    /* Reset backgrounds and colors for printing */
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    .hero,
+    .auction,
+    .impact,
+    .stay-connected,
+    .page-header {
+        background: white !important;
+        color: black !important;
+        padding: 1rem 0;
+    }
+
+    .hero h1,
+    .auction h2,
+    .impact h2,
+    .stay-connected h2,
+    .page-header h1,
+    h1, h2, h3 {
+        color: black !important;
+    }
+
+    /* Ensure links are visible */
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+
+    /* Show URLs after links */
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    /* Don't show URL for internal links */
+    a[href^="#"]::after,
+    a[href^="index"]::after,
+    a[href^="about"]::after,
+    a[href^="board"]::after,
+    a[href^="contact"]::after,
+    a[href^="privacy"]::after {
+        content: none;
+    }
+
+    /* Page breaks */
+    section {
+        page-break-inside: avoid;
+    }
+
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    /* Images */
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+
+    .carousel-slide {
+        display: block !important;
+        min-width: auto !important;
+        margin-bottom: 1rem;
+    }
+
+    .carousel-container {
+        display: block !important;
+        transform: none !important;
+    }
+
+    /* Footer */
+    footer {
+        background: white !important;
+        color: black !important;
+        border-top: 1px solid #ccc;
+        padding-top: 1rem;
+    }
+
+    .footer-links a {
+        color: black !important;
+    }
+}
