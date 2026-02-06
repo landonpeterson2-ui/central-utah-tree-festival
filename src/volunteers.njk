@@ -48,39 +48,69 @@ keywords: volunteer Central Utah Tree Festival, charity volunteer, Sanpete Count
         <div class="committees-grid">
             {% for committee in committees.committees %}
             <div class="committee-card">
-                <div class="committee-icon">
-                    {% if committee.icon == "ticket" %}
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path>
-                        <path d="M13 5v2"></path>
-                        <path d="M13 17v2"></path>
-                        <path d="M13 11v2"></path>
-                    </svg>
-                    {% elif committee.icon == "calendar" %}
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                    </svg>
-                    {% elif committee.icon == "share" %}
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="18" cy="5" r="3"></circle>
-                        <circle cx="6" cy="12" r="3"></circle>
-                        <circle cx="18" cy="19" r="3"></circle>
-                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-                    </svg>
-                    {% elif committee.icon == "heart" %}
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                    </svg>
-                    {% endif %}
+                <div class="committee-header">
+                    <div class="committee-icon">
+                        {% if committee.icon == "ticket" %}
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path>
+                            <path d="M13 5v2"></path>
+                            <path d="M13 17v2"></path>
+                            <path d="M13 11v2"></path>
+                        </svg>
+                        {% elif committee.icon == "calendar" %}
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        {% elif committee.icon == "share" %}
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="18" cy="5" r="3"></circle>
+                            <circle cx="6" cy="12" r="3"></circle>
+                            <circle cx="18" cy="19" r="3"></circle>
+                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                        </svg>
+                        {% elif committee.icon == "heart" %}
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        {% endif %}
+                    </div>
+                    <div class="committee-info">
+                        <h3>{{ committee.name }}</h3>
+                        <p>{{ committee.description }}</p>
+                        <p class="committee-needs"><strong>We need help with:</strong> {{ committee.needs }}</p>
+                    </div>
                 </div>
-                <div class="committee-info">
-                    <h3>{{ committee.name }}</h3>
-                    <p>{{ committee.description }}</p>
-                    <p class="committee-needs"><strong>We need help with:</strong> {{ committee.needs }}</p>
+
+                <!-- Committee Members -->
+                <div class="committee-members">
+                    {% if committee.members.length > 0 %}
+                    <h4 class="committee-members-title">Committee Members</h4>
+                    <div class="committee-members-list">
+                        {% for member in committee.members %}
+                        <div class="committee-member">
+                            <div class="committee-member-photo">
+                                {% if member.photo %}
+                                <img src="{{ member.photo }}" alt="{{ member.name }}" loading="lazy" width="60" height="60">
+                                {% else %}
+                                <span>{{ member.name | first }}</span>
+                                {% endif %}
+                            </div>
+                            <div class="committee-member-info">
+                                <span class="committee-member-name">{{ member.name }}</span>
+                                {% if member.role %}
+                                <span class="committee-member-role">{{ member.role }}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <p class="committee-join-prompt">Interested in joining this committee? <a href="#signup">Sign up to volunteer</a></p>
+                    {% endif %}
                 </div>
             </div>
             {% endfor %}
