@@ -9,6 +9,11 @@ keywords: Central Utah Tree Festival board, nonprofit leadership, Sanpete County
 <section class="hero">
     <h1>Our Board of Directors</h1>
     <p>Meet the dedicated volunteers leading our mission to connect rural children with specialized medical care</p>
+    {% if board.groupPhoto %}
+    <div class="board-group-photo">
+        <img src="{{ board.groupPhoto }}" alt="Central Utah Tree Festival Board of Directors" loading="lazy" width="1999" height="1334">
+    </div>
+    {% endif %}
 </section>
 
 <!-- Board Members Section -->

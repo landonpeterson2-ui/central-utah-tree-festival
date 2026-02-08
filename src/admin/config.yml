@@ -16,6 +16,11 @@ collections:
         label: "Board Members"
         file: "src/_data/board.json"
         fields:
+          - label: "Group Board Photo"
+            name: "groupPhoto"
+            widget: "image"
+            required: false
+            hint: "A group photo of the board, displayed in the hero area"
           - label: "Introduction Text"
             name: "intro"
             widget: "text"

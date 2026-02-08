@@ -42,7 +42,8 @@
       "Bash(git stash:*)",
       "Bash(git push:*)",
       "WebFetch(domain:givebutter.com)",
-      "WebFetch(domain:help.givebutter.com)"
+      "WebFetch(domain:help.givebutter.com)",
+      "Bash(python -c:*)"
     ]
   }
 }

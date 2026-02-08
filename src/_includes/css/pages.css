@@ -140,6 +140,21 @@
     background-color: var(--cream);
 }
 
+/* Board Group Photo */
+.board-group-photo {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.board-group-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Board Members Section */
 .board-section {
     background-color: var(--white);

@@ -1,10 +1,11 @@
 {
+  "groupPhoto": "/images/board-group-photo.webp",
   "intro": "Our board members are passionate community leaders who donate their time and expertise to ensure every child in Sanpete County has access to the medical care they need. Together, they guide the Central Utah Tree Festival and oversee how funds are distributed to support families on their healthcare journeys.",
   "members": [
     {
       "name": "Viki Bailey",
       "title": "President",
-      "photo": "",
+      "photo": "/images/board-member-1.webp",
       "bio": "Viki Bailey is the President and Founder of the Central Utah Tree Festival, a nonprofit organization she established in 2024 to raise funds for children's medical needs while bringing the community together through a holiday tradition. As a nurse practitioner dedicated to pediatric care, Viki's professional experience caring for children and families inspired her to create this event, drawing on her love for the Primary Children's Festival of Trees and her passion for community service. She is a wife, mother of seven, and grandmother of five."
     },
     {
@@ -14,28 +15,34 @@
       "bio": "Markell Barclay serves as Vice President of the organization and has spent the past few years supporting corporate fundraising, coordinating tree deliveries, and assisting with the legal and operational needs of the nonprofit. Having spent her entire life in Sanpete County—where her family has lived for generations—Markell has a deep connection to the community she serves. She believes in showing up, doing the work, and helping build something meaningful for the place she calls home."
     },
     {
-      "name": "Member Name",
+      "name": "Dana Brotherson",
       "title": "Treasurer",
-      "photo": "",
-      "bio": "Manages the organization's finances and ensures transparent accounting of all donations. Oversees fund distribution to families and maintains detailed records of how every dollar supports our mission."
+      "photo": "/images/board-member-3.webp",
+      "bio": "Dana Brotherson is a proud Sanpete County native, born and raised in Moroni, with turkey dust pumping through her veins from growing up in a hardworking farming family. As the youngest of three, she learned early the value of family, grit, and showing up for the people you love. Married to her high school sweetheart, Scott, and is the proud mom of four and an even prouder grandma being “Grandma” is her favorite thing in the world. She works at Snow College and loves giving back to her community and the amazing people who make it such a special place to call home. When she’s not working, you can usually find her watching her kids rodeo, spending time with friends and family, going on vacation, reading, baking, or sewing. Her roots run deep and she wouldn’t have it any other way. "
     },
     {
-      "name": "Member Name",
+      "name": "Malaree Parry",
       "title": "Secretary",
-      "photo": "",
-      "bio": "Maintains organizational records and communications. Documents board meetings and ensures proper record-keeping of our activities and decisions that impact the families we serve."
+      "photo": "/images/board-member-4.webp",
+      "bio": "Malaree grew up in the small town of Nephi, Utah with her three rowdy brothers. She loved the tight-knit community that instilled a deep appreciation for connection and belonging. She now lives in Sanpete County, where her family roots originated. With a passion for teaching, she has spent many years involved in teaching dance, piano, and elementary school. Malaree finds fulfillment in serving others and approaches life with a positive, happy outlook. An avid traveler and book lover, she is always seeking new adventures, hiking trails, and stories. And, of course, she will never turn down the chance to enjoy a little chocolate and Diet Coke!"
     },
     {
-      "name": "Member Name",
+      "name": "Jill Branch",
       "title": "Event Coordinator",
-      "photo": "",
+      "photo": "/images/board-member-5.webp",
       "bio": "Plans and executes the annual Central Utah Tree Festival. Coordinates with vendors, volunteers, and community partners to create a successful event that brings our community together for a great cause."
     },
     {
       "name": "Jill Carey",
-      "title": "Online Presence and Social Media",
-      "photo": "",
+      "title": "Marketing and Membership Chair",
+      "photo": "/images/board-member-6.webp",
       "bio": "Jill Carey lives in Ephraim and brings a wide range of life experience from having lived in many places around the world and throughout the United States. She loves staying active, especially when a workout is paired with good company and a lot of laughs. Jill enjoys spending time with her husband, family, and dogs, and she's an avid reader who loves meaningful conversations about books. Naturally curious, she enjoys getting to know people and understanding different personalities, a trait that shapes the way she connects with others and contributes as a board member."
+    },
+    {
+      "name": "Tori Boggess",
+      "title": "Operations Manager",
+      "photo": "/images/board-member-7.webp",
+      "bio": "Tori lives in Ephraim and is passionate about lifelong learning. She is a proud mom of four awesome boys. She enjoys reading, hiking, and traveling whenever she gets the chance. A self-proclaimed foodie, Tori loves discovering great food and spending quality time with her family and friends."
     }
   ]
 }
